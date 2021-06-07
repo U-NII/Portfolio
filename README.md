@@ -27,6 +27,13 @@
 ③自分の関心のあるオフ会があるか調べたい人。
 
 ## 設計書
+・ER図
+https://drive.google.com/file/d/19FwF4CNbk0WhdnSgNNQXow1lLwQKanex/view?usp=sharing
+
+・テーブル定義書
+https://docs.google.com/spreadsheets/d/1uLNmAKY2baxKv6rt0EKutHPtppsGHZxC4YhhIDpNXHU/edit?usp=sharing
+
+・アプリケーション詳細設計
 
 ## チャレンジ要素一覧
 
