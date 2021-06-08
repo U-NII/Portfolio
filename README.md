@@ -31,7 +31,7 @@
 https://drive.google.com/file/d/19FwF4CNbk0WhdnSgNNQXow1lLwQKanex/view?usp=sharing
 
 ・テーブル定義書
-https://docs.google.com/spreadsheets/d/1uLNmAKY2baxKv6rt0EKutHPtppsGHZxC4YhhIDpNXHU/edit?usp=sharing
+https://docs.google.com/spreadsheets/d/1_wheTmlpjOqPzuLNndHUN33JBH3GIDQt/edit#gid=649053259
 
 ・アプリケーション詳細設計
 
