@@ -1,0 +1,2 @@
+class CartProject < ApplicationRecord
+end

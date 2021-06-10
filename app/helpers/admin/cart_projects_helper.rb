@@ -1,0 +1,2 @@
+module Admin::CartProjectsHelper
+end

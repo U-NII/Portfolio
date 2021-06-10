@@ -1,0 +1,2 @@
+class RequestProject < ApplicationRecord
+end
