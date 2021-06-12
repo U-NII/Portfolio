@@ -997,3 +997,304 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/members" for 153.139.136.16 at 2021-06-12 07:35:06 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Members::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kdP5pI3LAT1+KyX8r97l2iSeuGE4w4Oo6VP0QImdaFZ+qb1WLbtBUUSXUpp/WvLiiwk6MirusR7UhYNH9tjwVg==", "member"=>{"last_name"=>"嗚呼", "first_name"=>"唖々", "last_name_kana"=>"アア", "first_name_kana"=>"アア", "email"=>"aa@gmail.com", "phone_number"=>"09012345678", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"　　新規登録　　"}
+Unpermitted parameter: :phone_number
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mMember Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "members" WHERE "members"."email" = ? LIMIT ?[0m  [["email", "aa@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mMember Create (0.5ms)[0m  [1m[32mINSERT INTO "members" ("email", "encrypted_password", "first_name", "last_name", "first_name_kana", "last_name_kana", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "aa@gmail.com"], ["encrypted_password", "$2a$12$5ZlQJTVRVMo1pC1h.TCQ5uh8j0WIVjylzit./YarkFo2/Uf3dOzNS"], ["first_name", "唖々"], ["last_name", "嗚呼"], ["first_name_kana", "アア"], ["last_name_kana", "アア"], ["created_at", "2021-06-12 07:35:07.417592"], ["updated_at", "2021-06-12 07:35:07.417592"]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 320ms (ActiveRecord: 1.5ms)
+
+
+  
+ActiveRecord::NotNullViolation (SQLite3::ConstraintException: members.telephone_number may not be NULL: INSERT INTO "members" ("email", "encrypted_password", "first_name", "last_name", "first_name_kana", "last_name_kana", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)):
+  
+sqlite3 (1.4.2) lib/sqlite3/statement.rb:108:in `step'
+sqlite3 (1.4.2) lib/sqlite3/statement.rb:108:in `block in each'
+sqlite3 (1.4.2) lib/sqlite3/statement.rb:107:in `loop'
+sqlite3 (1.4.2) lib/sqlite3/statement.rb:107:in `each'
+activerecord (5.2.6) lib/active_record/connection_adapters/sqlite3_adapter.rb:222:in `to_a'
+activerecord (5.2.6) lib/active_record/connection_adapters/sqlite3_adapter.rb:222:in `block (2 levels) in exec_query'
+activesupport (5.2.6) lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+activesupport (5.2.6) lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+activesupport (5.2.6) lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+activerecord (5.2.6) lib/active_record/connection_adapters/sqlite3_adapter.rb:213:in `block in exec_query'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract_adapter.rb:581:in `block (2 levels) in log'
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/monitor.rb:230:in `mon_synchronize'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract_adapter.rb:580:in `block in log'
+activesupport (5.2.6) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract_adapter.rb:571:in `log'
+activerecord (5.2.6) lib/active_record/connection_adapters/sqlite3_adapter.rb:212:in `exec_query'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/database_statements.rb:130:in `exec_insert'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/database_statements.rb:162:in `insert'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/query_cache.rb:21:in `insert'
+activerecord (5.2.6) lib/active_record/persistence.rb:187:in `_insert_record'
+activerecord (5.2.6) lib/active_record/persistence.rb:734:in `_create_record'
+activerecord (5.2.6) lib/active_record/counter_cache.rb:184:in `_create_record'
+activerecord (5.2.6) lib/active_record/locking/optimistic.rb:70:in `_create_record'
+activerecord (5.2.6) lib/active_record/attribute_methods/dirty.rb:140:in `_create_record'
+activerecord (5.2.6) lib/active_record/callbacks.rb:346:in `block in _create_record'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+activesupport (5.2.6) lib/active_support/callbacks.rb:816:in `_run_create_callbacks'
+activerecord (5.2.6) lib/active_record/callbacks.rb:346:in `_create_record'
+activerecord (5.2.6) lib/active_record/timestamp.rb:102:in `_create_record'
+activerecord (5.2.6) lib/active_record/persistence.rb:705:in `create_or_update'
+activerecord (5.2.6) lib/active_record/callbacks.rb:342:in `block in create_or_update'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+activesupport (5.2.6) lib/active_support/callbacks.rb:816:in `_run_save_callbacks'
+activerecord (5.2.6) lib/active_record/callbacks.rb:342:in `create_or_update'
+activerecord (5.2.6) lib/active_record/persistence.rb:275:in `save'
+activerecord (5.2.6) lib/active_record/validations.rb:46:in `save'
+activerecord (5.2.6) lib/active_record/transactions.rb:310:in `block (2 levels) in save'
+activerecord (5.2.6) lib/active_record/transactions.rb:387:in `block in with_transaction_returning_status'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/database_statements.rb:267:in `block in transaction'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/transaction.rb:239:in `block in within_new_transaction'
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/monitor.rb:230:in `mon_synchronize'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/transaction.rb:236:in `within_new_transaction'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/database_statements.rb:267:in `transaction'
+activerecord (5.2.6) lib/active_record/transactions.rb:212:in `transaction'
+activerecord (5.2.6) lib/active_record/transactions.rb:385:in `with_transaction_returning_status'
+activerecord (5.2.6) lib/active_record/transactions.rb:310:in `block in save'
+activerecord (5.2.6) lib/active_record/transactions.rb:325:in `rollback_active_record_state!'
+activerecord (5.2.6) lib/active_record/transactions.rb:309:in `save'
+activerecord (5.2.6) lib/active_record/suppressor.rb:44:in `save'
+devise (4.8.0) app/controllers/devise/registrations_controller.rb:19:in `create'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.6) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.6) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.6) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.6) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.6) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.6) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.6) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/members/sign_up" for 153.139.136.16 at 2021-06-12 07:35:18 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Members::RegistrationsController#new as HTML
+  Rendering members/registrations/new.html.erb within layouts/application
+  Rendered members/registrations/new.html.erb within layouts/application (96.8ms)
+Completed 200 OK in 466ms (Views: 464.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/members/sign_in" for 153.139.136.16 at 2021-06-12 07:35:32 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Members::SessionsController#new as HTML
+  Rendering members/sessions/new.html.erb within layouts/application
+  Rendered members/shared/_links.html.erb (1.0ms)
+  Rendered members/sessions/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 69ms (Views: 68.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 153.139.136.16 at 2021-06-12 07:35:36 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 71ms (Views: 70.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/members/sign_up" for 153.139.136.16 at 2021-06-12 07:35:38 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Members::RegistrationsController#new as HTML
+  Rendering members/registrations/new.html.erb within layouts/application
+  Rendered members/registrations/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 68ms (Views: 66.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/members" for 153.139.136.16 at 2021-06-12 07:36:23 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Members::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5BHdpki+KSsk5+xM1YbGl6J9pxQ9yCIyhEZFR2kAM7PMEamWvCOjxmLwBHGU6DokKIMYfOI64OZrkF6OkOtAlQ==", "member"=>{"last_name"=>"嗚呼", "first_name"=>"唖々", "last_name_kana"=>"アア", "first_name_kana"=>"アア", "email"=>"aa@gmail.com", "telephone_number"=>"09112345678", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"　　新規登録　　"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mMember Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "members" WHERE "members"."email" = ? LIMIT ?[0m  [["email", "aa@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mMember Create (1.6ms)[0m  [1m[32mINSERT INTO "members" ("email", "encrypted_password", "first_name", "last_name", "first_name_kana", "last_name_kana", "telephone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "aa@gmail.com"], ["encrypted_password", "$2a$12$kDay/Y4mseqEyysuQrMSIOCsBiEpJf7oAC4LpmdGyP3E.lgufG2.e"], ["first_name", "唖々"], ["last_name", "嗚呼"], ["first_name_kana", "アア"], ["last_name_kana", "アア"], ["telephone_number", "09112345678"], ["created_at", "2021-06-12 07:36:23.843840"], ["updated_at", "2021-06-12 07:36:23.843840"]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://aeda2ff083be4f749e28bc0fda130121.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 303ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/" for 153.139.136.16 at 2021-06-12 07:36:24 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (0.5ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 500 Internal Server Error in 281ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `public_member_path' for #<#<Class:0x00007f6f540404f0>:0x00007f6f3c069a20>
+Did you mean?  public_method):
+    21:           <nav>
+    22:           <ul class="navbar-nav ml-auto p-3">
+    23:           <% if member_signed_in? %>
+    24:           <li class="nav-item"><%= link_to "マイページ",public_member_path(current_member), class: 'text-dark' %></li>
+    25:           <li class="nav-item"><%= link_to "イベント一覧",public_projects_path, class: 'text-dark' %></li>
+    26:           <li class="nav-item"><%= link_to "カート",public_cart_products_path, class: 'text-dark' %></li>
+    27:           <li class="nav-item"><%= link_to "ログアウト",destroy_member_session_path, method: :delete, class: 'text-dark' %></li>
+  
+app/views/layouts/application.html.erb:24:in `_app_views_layouts_application_html_erb___2759579914327380954_70057862609160'
+Started GET "/" for 153.139.136.16 at 2021-06-12 07:42:50 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (0.8ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 500 Internal Server Error in 1003ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_customer' for #<#<Class:0x0000000006219868>:0x0000000006271d88>
+Did you mean?  current_member):
+    21:           <nav>
+    22:           <ul class="navbar-nav ml-auto p-3">
+    23:           <% if member_signed_in? %>
+    24:           <li class="nav-item"><%= link_to "マイページ",customer_path(current_customer), class: 'text-dark' %></li>
+    25:           <li class="nav-item"><%= link_to "イベント一覧",public_projects_path, class: 'text-dark' %></li>
+    26:           <li class="nav-item"><%= link_to "カート",public_cart_products_path, class: 'text-dark' %></li>
+    27:           <li class="nav-item"><%= link_to "ログアウト",destroy_member_session_path, method: :delete, class: 'text-dark' %></li>
+  
+app/views/layouts/application.html.erb:24:in `_app_views_layouts_application_html_erb__2823719689635584848_69939014674420'
+Started GET "/" for 153.139.136.16 at 2021-06-12 07:47:20 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (0.7ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 500 Internal Server Error in 953ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `public_projects_path' for #<#<Class:0x0000000003f7d818>:0x0000000003f84938>
+Did you mean?  public_compute_asset_path):
+    22:           <ul class="navbar-nav ml-auto p-3">
+    23:           <% if member_signed_in? %>
+    24:           <li class="nav-item"><%= link_to "マイページ",member_path(current_member), class: 'text-dark' %></li>
+    25:           <li class="nav-item"><%= link_to "イベント一覧",public_projects_path, class: 'text-dark' %></li>
+    26:           <li class="nav-item"><%= link_to "カート",public_cart_products_path, class: 'text-dark' %></li>
+    27:           <li class="nav-item"><%= link_to "ログアウト",destroy_member_session_path, method: :delete, class: 'text-dark' %></li>
+    28:           <% elsif admin_signed_in? %>
+  
+app/views/layouts/application.html.erb:25:in `_app_views_layouts_application_html_erb__2937514838510369673_33354400'
+Started GET "/" for 153.139.136.16 at 2021-06-12 07:48:01 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (0.8ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 500 Internal Server Error in 472ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `public_cart_products_path' for #<#<Class:0x0000000003f7d818>:0x00007fb9513323b0>
+Did you mean?  public_compute_asset_path):
+    23:           <% if member_signed_in? %>
+    24:           <li class="nav-item"><%= link_to "マイページ",member_path(current_member), class: 'text-dark' %></li>
+    25:           <li class="nav-item"><%= link_to "イベント一覧",projects_path, class: 'text-dark' %></li>
+    26:           <li class="nav-item"><%= link_to "カート",public_cart_products_path, class: 'text-dark' %></li>
+    27:           <li class="nav-item"><%= link_to "ログアウト",destroy_member_session_path, method: :delete, class: 'text-dark' %></li>
+    28:           <% elsif admin_signed_in? %>
+    29:           <li class="nav-item"><%= link_to "イベント一覧",admin_projects_path, class: 'text-dark' %></li>
+  
+app/views/layouts/application.html.erb:26:in `_app_views_layouts_application_html_erb__2937514838510369673_70216954048880'
+Started GET "/" for 153.139.136.16 at 2021-06-12 07:48:41 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (0.5ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 61ms (Views: 60.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 153.139.136.16 at 2021-06-12 07:49:56 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (0.5ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 87ms (Views: 86.2ms | ActiveRecord: 0.1ms)
+
+

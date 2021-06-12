@@ -35,7 +35,7 @@ scope module: :public do
         get :complete
       end
     end
-    resources :customers, only: [:show, :edit, :update] do
+    resources :members, only: [:show, :edit, :update] do
       member do
         get :quit_confirm
         patch :quit

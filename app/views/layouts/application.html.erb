@@ -21,9 +21,9 @@
           <nav>
           <ul class="navbar-nav ml-auto p-3">
           <% if member_signed_in? %>
-          <li class="nav-item"><%= link_to "マイページ",public_member_path(current_member), class: 'text-dark' %></li>
-          <li class="nav-item"><%= link_to "イベント一覧",public_projects_path, class: 'text-dark' %></li>
-          <li class="nav-item"><%= link_to "カート",public_cart_products_path, class: 'text-dark' %></li>
+          <li class="nav-item"><%= link_to "マイページ",member_path(current_member), class: 'text-dark' %></li>
+          <li class="nav-item"><%= link_to "イベント一覧",projects_path, class: 'text-dark' %></li>
+          <li class="nav-item"><%= link_to "カート",cart_products_path, class: 'text-dark' %></li>
           <li class="nav-item"><%= link_to "ログアウト",destroy_member_session_path, method: :delete, class: 'text-dark' %></li>
           <% elsif admin_signed_in? %>
           <li class="nav-item"><%= link_to "イベント一覧",admin_projects_path, class: 'text-dark' %></li>
