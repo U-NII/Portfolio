@@ -1,0 +1,33 @@
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <%= link_to "NaganoCake",public_root_path, class: 'mt-2 mb-3' %>
+            <li class="nav-item">
+              <%= link_to "About",about_path %>
+            </li>
+            <% if user_signed_in? %>
+            <li class="nav-item">
+              <%= link_to "マイページ",public_member_path(current_user.id) %>
+            </li>
+            <% end %>
+            <li class="nav-item">
+              <%= link_to "商品一覧",public_products_path %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "カート",public_cart_products_path %>
+            </li>
+            <% if user_signed_in? %>
+            <li class="nav-item">
+              <%= link_to "ログアウト",destroy_user_session_path, method: :delete %>
+            </li>
+            <% else %>
+            <li class="nav-item">
+              <%= link_to "ログイン", new_user_session_path %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "新規登録", new_user_registration_path %>
+            </li>
+            <% end %>
+        </div>
+      </nav>
+    </header>
