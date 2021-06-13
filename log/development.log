@@ -1298,3 +1298,600 @@ Processing by Public::HomesController#top as HTML
 Completed 200 OK in 87ms (Views: 86.2ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/" for 153.139.136.16 at 2021-06-12 08:08:34 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (0.7ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 305ms (Views: 297.3ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/members/sign_out" for 153.139.136.16 at 2021-06-12 08:08:40 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Members::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"N4R9U6ZB0GLTr63ticwhLX1y8NIt1o78emR2Gjg3IDjY/jmhBjGQDukT2otZSDYV0uVygT/7vEpHsgEdR3K4OA=="}
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://aeda2ff083be4f749e28bc0fda130121.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 51ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 153.139.136.16 at 2021-06-12 08:08:40 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 60ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_sing_up" for 153.139.136.16 at 2021-06-12 08:11:41 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/admin_sing_up"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admins/sign_in" for 153.139.136.16 at 2021-06-12 08:17:48 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 90ms (Views: 78.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/admins/sign_in" for 153.139.136.16 at 2021-06-12 08:18:09 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Vg+fuF3DD9ANU1vwS46fC9v1w8bRcKMIq4O3QFpMzs5/Q/j1ut7jrwHe1aG7cO+5iayS7DUpcgYQipK2TEGZA==", "admin"=>{"email"=>"admin@icloud.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@icloud.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.3ms)
+
+
+Processing by Admins::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Vg+fuF3DD9ANU1vwS46fC9v1w8bRcKMIq4O3QFpMzs5/Q/j1ut7jrwHe1aG7cO+5iayS7DUpcgYQipK2TEGZA==", "admin"=>{"email"=>"admin@icloud.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 356ms (Views: 60.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in" for 153.139.136.16 at 2021-06-12 08:26:20 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ImddzaZbsQGOQ5Ndyrbpfr3bX1SbM5HoMN9E0+VCy/3CwmxQkcfGsHJxpWSNdRC8dJI6EDCi9qwKM2BEPRr+og==", "admin"=>{"email"=>"admin@icloud.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@icloud.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.2ms)
+
+
+Processing by Admins::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ImddzaZbsQGOQ5Ndyrbpfr3bX1SbM5HoMN9E0+VCy/3CwmxQkcfGsHJxpWSNdRC8dJI6EDCi9qwKM2BEPRr+og==", "admin"=>{"email"=>"admin@icloud.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 367ms (Views: 85.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/members/sign_up" for 153.139.136.16 at 2021-06-12 08:26:52 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Members::RegistrationsController#new as HTML
+  Rendering members/registrations/new.html.erb within layouts/application
+  Rendered members/registrations/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 94ms (Views: 92.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 153.139.136.16 at 2021-06-12 08:27:49 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 95ms (Views: 92.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in" for 153.139.136.16 at 2021-06-12 08:28:01 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dPjOEdSMh6/mLgex10BzVBAUkbbee3tAKM1PjPe0R4SUXf+M4xDwHhocMYiQg4qW2V308nXqHAQSIWsbL+xy2w==", "admin"=>{"email"=>"admin@icloud.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@icloud.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.1ms)
+
+
+Processing by Admins::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dPjOEdSMh6/mLgex10BzVBAUkbbee3tAKM1PjPe0R4SUXf+M4xDwHhocMYiQg4qW2V308nXqHAQSIWsbL+xy2w==", "admin"=>{"email"=>"admin@icloud.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 339ms (Views: 60.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@icloud.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:8
+  [1m[36mAdmin Create (5.4ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@icloud.com"], ["encrypted_password", "$2a$12$1SD0zljAnLOMJd5Q6cZ.xuyTJB9QpvFi/R8AIyQS46sP3vrz2Jvky"], ["created_at", "2021-06-12 08:37:26.119810"], ["updated_at", "2021-06-12 08:37:26.119810"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+Started GET "/admins/sign_in" for 153.139.136.16 at 2021-06-12 08:38:09 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (102.4ms)
+Completed 200 OK in 706ms (Views: 690.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/admins/sign_in" for 153.139.136.16 at 2021-06-12 08:38:17 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kV2ZqqrCM5C6D53lfDhqq8/5huwePvpB+I5pgqJBy0px+Kg3nV5EIUY9q9w7+5NpBrDjqLWvnQXCYk0Vehn+FQ==", "admin"=>{"email"=>"admin@icloud.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mAdmin Load (3.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@icloud.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://aeda2ff083be4f749e28bc0fda130121.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 308ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 153.139.136.16 at 2021-06-12 08:38:18 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (0.5ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 500 Internal Server Error in 590ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `admin_requests_path' for #<#<Class:0x00007f32440470e0>:0x00007f3244045650>
+Did you mean?  admin_request_path
+               admin_request_url
+               admin_projects_path
+               admin_genres_path):
+    14:       <nav class="navbar navbar-expand-lg navbar-light">
+    15:         <div class="container">
+    16:           <% if admin_signed_in? %>
+    17:           <%= link_to "OFFING",admin_requests_path, class: 'mt-2 mb-3 text-dark' %>
+    18:           <% else %>
+    19:           <%= link_to "OFFING",root_path, class: 'mt-2 mb-3 text-dark' %>
+    20:           <% end %>
+  
+app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb__991486160957083320_69926933149480'
+Started GET "/" for 153.139.136.16 at 2021-06-12 09:10:46 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (1.1ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 500 Internal Server Error in 684ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `admin_requests_path' for #<#<Class:0x00007f32442a9e28>:0x00007f324433ff18>
+Did you mean?  admin_request_path
+               admin_request_url
+               admin_projects_path
+               admin_genres_path):
+    14:       <nav class="navbar navbar-expand-lg navbar-light">
+    15:         <div class="container">
+    16:           <% if admin_signed_in? %>
+    17:           <%= link_to "OFFING",admin_requests_path, class: 'mt-2 mb-3 text-dark' %>
+    18:           <% else %>
+    19:           <%= link_to "OFFING",root_path, class: 'mt-2 mb-3 text-dark' %>
+    20:           <% end %>
+  
+app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb__991486160957083320_69926934481820'
+Started GET "/" for 153.139.136.16 at 2021-06-12 09:11:09 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (1.3ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 500 Internal Server Error in 1188ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `admin_requests_path' for #<#<Class:0x0000000006482ff0>:0x00000000064dbbc8>
+Did you mean?  admin_request_path
+               admin_request_url
+               admin_projects_path
+               admin_genres_path):
+    14:       <nav class="navbar navbar-expand-lg navbar-light">
+    15:         <div class="container">
+    16:           <% if admin_signed_in? %>
+    17:           <%= link_to "OFFING",admin_requests_path, class: 'mt-2 mb-3 text-dark' %>
+    18:           <% else %>
+    19:           <%= link_to "OFFING",root_path, class: 'mt-2 mb-3 text-dark' %>
+    20:           <% end %>
+  
+app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb___86605356299410941_70330427124260'
+Started GET "/admins/sign_in" for 153.139.136.16 at 2021-06-12 09:29:36 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#new as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 410ms (ActiveRecord: 0.2ms)
+
+
+  
+NameError (undefined local variable or method `admin_orders_path' for #<Admins::SessionsController:0x00007fee2411c6e0>
+Did you mean?  admin_genres_path
+               admin_genre_path
+               admin_projects_path
+               admin_root_path
+               admin_project_path):
+  
+app/controllers/concerns/application_controller.rb:8:in `after_sign_in_path_for'
+Started GET "/admins/sign_in" for 153.139.136.16 at 2021-06-12 09:29:42 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#new as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 229ms (ActiveRecord: 0.1ms)
+
+
+  
+NameError (undefined local variable or method `admin_orders_path' for #<Admins::SessionsController:0x00007fee296fac10>
+Did you mean?  admin_genres_path
+               admin_genre_path
+               admin_projects_path
+               admin_root_path
+               admin_project_path):
+  
+app/controllers/concerns/application_controller.rb:8:in `after_sign_in_path_for'
+Started GET "/admins/sign_in" for 153.139.136.16 at 2021-06-12 09:30:12 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#new as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 321ms (ActiveRecord: 1.8ms)
+
+
+  
+NameError (undefined local variable or method `admin_requests_path' for #<Admins::SessionsController:0x00007fee245364b0>
+Did you mean?  admin_request_path
+               admin_request_url
+               admin_projects_path
+               admin_genres_path):
+  
+app/controllers/concerns/application_controller.rb:8:in `after_sign_in_path_for'
+Started GET "/admins/sign_in" for 153.139.136.16 at 2021-06-12 09:30:26 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#new as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"admin/requests"}, missing required keys: [:id]):
+  
+app/controllers/concerns/application_controller.rb:8:in `after_sign_in_path_for'
+Started GET "/admins/sign_in" for 153.139.136.16 at 2021-06-12 09:30:47 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#new as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://aeda2ff083be4f749e28bc0fda130121.vfs.cloud9.us-east-2.amazonaws.com/admin/requests/1
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 18ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/requests/1" for 153.139.136.16 at 2021-06-12 09:30:47 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Admin::RequestsController):
+  
+actionpack (5.2.6) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.6) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.6) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.6) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/requests/1" for 153.139.136.16 at 2021-06-12 09:32:20 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::RequestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering admin/requests/show.html.erb within layouts/application
+  Rendered admin/requests/show.html.erb within layouts/application (0.3ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 500 Internal Server Error in 590ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `admin_requests_path' for #<#<Class:0x00007fee29a2bd80>:0x00007fee29a2a2c8>
+Did you mean?  admin_request_path
+               admin_request_url
+               admin_projects_path
+               admin_genres_path):
+    14:       <nav class="navbar navbar-expand-lg navbar-light">
+    15:         <div class="container">
+    16:           <% if admin_signed_in? %>
+    17:           <%= link_to "OFFING",admin_requests_path, class: 'mt-2 mb-3 text-dark' %>
+    18:           <% else %>
+    19:           <%= link_to "OFFING",root_path, class: 'mt-2 mb-3 text-dark' %>
+    20:           <% end %>
+  
+app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb___86605356299410941_70330438769560'
+Started GET "/admin/requests/1" for 153.139.136.16 at 2021-06-12 09:33:56 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::RequestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering admin/requests/show.html.erb within layouts/application
+  Rendered admin/requests/show.html.erb within layouts/application (0.3ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 500 Internal Server Error in 468ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `admin_members_path' for #<#<Class:0x00007fee29694e10>:0x00007fee29686ef0>
+Did you mean?  admin_genres_path
+               admin_genre_path
+               admin_request_path
+               edit_member_path):
+    27:           <li class="nav-item"><%= link_to "ログアウト",destroy_member_session_path, method: :delete, class: 'text-dark' %></li>
+    28:           <% elsif admin_signed_in? %>
+    29:           <li class="nav-item"><%= link_to "イベント一覧",admin_projects_path, class: 'text-dark' %></li>
+    30:           <li class="nav-item"><%= link_to "会員一覧",admin_members_path, class: 'text-dark' %></li>
+    31:           <li class="nav-item"><%= link_to "注文履歴一覧",admin_requests_path, class: 'text-dark' %></li>
+    32:           <li class="nav-item"><%= link_to "ジャンル一覧",admin_genres_path, class: 'text-dark' %></li>
+    33:           <li class="nav-item"><%= link_to "ログアウト",destroy_admin_session_path,method: :delete, class: 'text-dark' %></li>
+  
+app/views/layouts/application.html.erb:30:in `_app_views_layouts_application_html_erb___86605356299410941_70330436804140'
+Started GET "/admin/reque" for 153.139.136.16 at 2021-06-12 09:34:23 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/admin/reque"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/reque" for 153.139.136.16 at 2021-06-12 09:35:16 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/admin/reque"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/requests/1" for 153.139.136.16 at 2021-06-12 09:35:20 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::RequestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering admin/requests/show.html.erb within layouts/application
+  Rendered admin/requests/show.html.erb within layouts/application (0.3ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 500 Internal Server Error in 427ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `admin_requests_path' for #<#<Class:0x00007fee29694e10>:0x0000000005fa0640>
+Did you mean?  admin_request_path
+               admin_request_url
+               admin_projects_path
+               admin_genres_path):
+    28:           <% elsif admin_signed_in? %>
+    29:           <li class="nav-item"><%= link_to "イベント一覧",admin_projects_path, class: 'text-dark' %></li>
+    30:           <li class="nav-item"><%#= link_to "会員一覧",admin_members_path, class: 'text-dark' %></li>
+    31:           <li class="nav-item"><%= link_to "注文履歴一覧",admin_requests_path, class: 'text-dark' %></li>
+    32:           <li class="nav-item"><%= link_to "ジャンル一覧",admin_genres_path, class: 'text-dark' %></li>
+    33:           <li class="nav-item"><%= link_to "ログアウト",destroy_admin_session_path,method: :delete, class: 'text-dark' %></li>
+    34:           <% else %>
+  
+app/views/layouts/application.html.erb:31:in `_app_views_layouts_application_html_erb___86605356299410941_51931540'
+Started GET "/admin/requests/1" for 153.139.136.16 at 2021-06-12 09:35:34 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::RequestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering admin/requests/show.html.erb within layouts/application
+  Rendered admin/requests/show.html.erb within layouts/application (0.3ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 138ms (Views: 137.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/requests/1" for 153.139.136.16 at 2021-06-12 09:35:39 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::RequestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering admin/requests/show.html.erb within layouts/application
+  Rendered admin/requests/show.html.erb within layouts/application (0.3ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 95ms (Views: 93.9ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/admins/sign_out" for 153.139.136.16 at 2021-06-12 09:35:43 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hqJpJ2ucKSBHNwe1CLYmNQ4lW77kLkem+gWHG9THynpnb/gVVxJKUY2NyHFI4ozJ++zQIcKgBRoIFPPPCr2mlw=="}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://aeda2ff083be4f749e28bc0fda130121.vfs.cloud9.us-east-2.amazonaws.com/admins/sign_in
+Completed 302 Found in 20ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admins/sign_in" for 153.139.136.16 at 2021-06-12 09:35:43 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 108ms (Views: 107.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in" for 153.139.136.16 at 2021-06-12 09:35:59 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZX/6TRwTCFh+M2s/9cfQnHjyNkqtpdQ1pryqMDlSxcMr2MkE1v6vtcQKGjKFF9dlVMKJeGsYupz3qRBKbSurXA==", "admin"=>{"email"=>"admin@icloud.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mAdmin Load (1.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@icloud.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://aeda2ff083be4f749e28bc0fda130121.vfs.cloud9.us-east-2.amazonaws.com/admin/requests/1
+Completed 302 Found in 308ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/admin/requests/1" for 153.139.136.16 at 2021-06-12 09:35:59 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::RequestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering admin/requests/show.html.erb within layouts/application
+  Rendered admin/requests/show.html.erb within layouts/application (0.3ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 100ms (Views: 99.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/requests/1" for 153.139.136.16 at 2021-06-12 10:44:16 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Admin::RequestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering admin/requests/show.html.erb within layouts/application
+  Rendered admin/requests/show.html.erb within layouts/application (0.9ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 392ms (Views: 382.7ms | ActiveRecord: 0.8ms)
+
+
