@@ -1,0 +1,90 @@
+<div class='container'>
+  <div class='row'>
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+      <h2><%= @member.last_name %><%= @member.first_name %>さんの会員情報編集</h2>
+      <%= form_with model:@member, url:admin_member_path(@member.id), local:true do |f| %>
+        <%= render 'layouts/error_messages', resource: @member %>
+        <table class="col-12 table table-borderless">
+          <tbody>
+            <tr>
+              <td>
+                会員ID
+              </td>
+              <td>
+                <%= @member.id %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <%= f.label :"氏名", class: "col-xs-3" %>
+              </td>
+              <td>
+                <%= f.text_field :last_name, class: "col-12" %>
+              </td>
+              <td>
+                <%= f.text_field :first_name, class: "col-12" %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <%= f.label :"フリガナ", class: "col-xs-3" %>
+              </td>
+              <td>
+                <%= f.text_field :last_name_kana, class: "col-12" %>
+              </td>
+              <td>
+                <%= f.text_field :first_name_kana, class: "col-12" %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <%= f.label :"郵便番号", class: "col-xs-3" %>
+              </td>
+              <td>
+                <%= f.text_field :postal_code, class: "col-12" %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <%= f.label :"住所", class: "col-xs-3" %>
+              </td>
+              <td>
+                <%= f.text_field :address, class: "col-12" %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <%= f.label :"電話番号(ハイフンなし)", class: "col-xs-3" %>
+              </td>
+              <td>
+                <%= f.text_field :phone_number, class: "col-12" %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <%= f.label :"メールアドレス", class: "col-xs-3" %>
+              </td>
+              <td>
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "col-12" %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <%= f.label :"会員ステータス", class: "col-xs-3" %>
+              </td>
+              <td>
+                <%= f.radio_button :withdrawal_flag, :false %>
+                <%= f.label :withdrawal_flag, "有効", value: :false %>
+                <%= f.radio_button :withdrawal_flag, :true %>
+                <%= f.label :withdrawal_flag, "退会", value: :true %>
+              </td>
+            </tr>
+            <tr>
+              <%= f.submit "変更を保存", class: "btn btn-primary" %>
+            </tr>
+          </tbody>
+        </table>
+      <% end %>
+    </div>
+  </div>
+</div>

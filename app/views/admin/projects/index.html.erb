@@ -1,0 +1,52 @@
+<div class="shiba-background">
+  <div class="container">
+    <div class="row">
+      <h2 class="col-2 text-center text-white align-self-start bg-secondary mt-4">商品一覧</h2>
+      <div class = "text-center offset-8 mt-4">
+        <%= link_to new_admin_project_path, data: {"turbolinks" => false}, class: "btn btn-warning" do %>
+        <i class="fas fa-plus"></i>
+          新規商品登録
+        <% end %>
+      </div>
+      <table class="table table-light table-hover">
+        <thead class="thead-light">
+          <tr>
+            <th class = text-center>商品ID</th>
+            <th>商品名</th>
+            <th class = text-center>税抜価格</th>
+            <th class = text-center>ジャンル</th>
+            <th class = text-center>ステータス</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @projects.each do |project| %>
+            <tr>
+              <td class="text-center align-middle">
+                <%= project.id %>
+              </td>
+              <td class="text-left align-middle">
+                <%= link_to admin_project_path(project), class: "btn-link" do %>
+                  <%= project.name %>
+                <% end %>
+              </td>
+              <td class="text-center align-middle">
+                <%= project.price.to_s(:delimited) %>
+              </td>
+              <td class="text-center align-middle">
+                <%= project.genre.name %>
+              </td>
+              <td class="text-center align-middle">
+                <% if project.is_active %>
+                  販売中
+                <% elsif project.sale_status %>
+                  販売停止中
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <%= paginate(@projects) %>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 class Public::HomesController < ApplicationController
     def top
-        #@products = Product.all
+        @projects = Project.all
     end
     
     def about

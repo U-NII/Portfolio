@@ -33,7 +33,7 @@
           <li class="nav-item"><%= link_to "ログアウト",destroy_admin_session_path,method: :delete, class: 'text-dark' %></li>
           <% else %>
           <li class="nav-item"><%= link_to "About",about_path, class: 'text-dark' %></li>
-          <li class="nav-item"><%= link_to "イベント一覧", projects_path, class: 'text-dark' %></li>
+          <li class="nav-item"><%= link_to "イベント一覧", admin_projects_path, class: 'text-dark' %></li>
           <li class="nav-item"><%= link_to "ログイン", new_member_session_path, class: 'text-dark' %></li>
           <li class="nav-item"><%= link_to "新規登録", new_member_registration_path, class: 'text-dark' %></li>
           <% end %>
