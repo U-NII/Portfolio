@@ -18,7 +18,7 @@ class Admin::ProjectsController < ApplicationController
   end
 
   def index
-    @project = Project.all.page(params[:page]).per(10)
+    @projects = Project.all.page(params[:page]).per(10)
   end
 
   def show
@@ -34,7 +34,7 @@ class Admin::ProjectsController < ApplicationController
     @project = Project.find(params[:id])
     if @project.update(project_params)
       flash[:success] = "商品内容をを変更しました"
-      redirect_to admin_project_path(@product)
+      redirect_to admin_project_path(@project)
     else
       render :edit
     end
@@ -44,7 +44,7 @@ class Admin::ProjectsController < ApplicationController
 
   def project_params
     params.require(:project).permit(:name, :image, :description,
-       :genre_id, :price, :sale_status)
+       :genre_id, :price, :is_active)
   end
 
   def set_genres

@@ -1,17 +1,17 @@
 class Admin::GenresController < ApplicationController
     before_action :authenticate_admin!, except: [:show]
-    
+
     def index
         @genres = Genre.all
         @genre = Genre.new
     end
-    
+
     def create
-        @genre = Genre.neww(genre_params)
+        @genre = Genre.new(genre_params)
         @genre.save
-        redirect_to repuest.referer
+        redirect_back(fallback_location: root_path)
     end
-    
+
     def edit
         @genre = Genre.find(params[:id])
     end

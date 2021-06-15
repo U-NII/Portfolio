@@ -1,41 +1,41 @@
-<div class="container-fluid box-background">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="top-box">
-        <h1 class="top-title">ようこそ、OFFINGへ！</h1>
-        <p class=" top-text">
-          このサイトは、ケーキ販売のECサイトになります。</br>
-          会員でない方も商品の閲覧はできますが、</br>
-          購入には会員登録が必要になります。
-        </p>
+  <div class="container-fluid box-background">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="top-box">
+          <h1 class="top-title">ようこそ、OFFINGへ！</h1>
+          <p class=" top-text">
+            このサイトは、ケーキ販売のECサイトになります。</br>
+            会員でない方も商品の閲覧はできますが、</br>
+            購入には会員登録が必要になります。
+          </p>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div class="mx-auto col-md-8 mt-4">
-  <h2>新規イベント</h2>
-  <div class="container">
-    <div class="row">
-      <%# @products.last(4).each do |product| %>
-        <div class="col-md-3">
-          <div>
-            <%#= link_to public_product_path(product), class: "no-underline", 'data-turbolinks': false do %>
-              <%#= attachment_image_tag product, :image, :fill, 200, 150, fallback: "no_image.jpg", class: "card-img-top " %>
-              <div class="card-body">
-                <h6 class="card-title">
-                  <%#= product.name %>
-                </h6>
-            <%# end %>
-                <p class="card-text">
-                  <%#= product.price.to_s(:delimited, delimiter: ',') %>円
-                </p>
-              </div>
+  <div class="mx-auto col-md-8 mt-4">
+    <h2>新規イベント</h2>
+    <div class="container">
+      <div class="row">
+        <%# @projects.last(4).each do |project| %>
+          <div class="col-md-3">
+            <div>
+              <%#= link_to public_project_path(project), class: "no-underline", 'data-turbolinks': false do %>
+                <%#= attachment_image_tag project, :image, :fill, 200, 150, fallback: "no_image.jpg", class: "card-img-top " %>
+                <div class="card-body">
+                  <h6 class="card-title">
+                    <%#= project.name %>
+                  </h6>
+              <%# end %>
+                  <p class="card-text">
+                    <%#= project.price.to_s(:delimited, delimiter: ',') %>円
+                  </p>
+                </div>
+            </div>
           </div>
-        </div>
-      <%# end %>
-    </div>
-    <div class="all_products">
-      <%#= link_to "全ての商品を見る >", public_products_path, class: "no-underline" %>
+        <%# end %>
+      </div>
+      <div class="all_products">
+        <%#= link_to "全ての商品を見る >", public_projects_path, class: "no-underline" %>
+      </div>
     </div>
   </div>
-</div>

@@ -1,7 +1,7 @@
 class Admin::RequestsController < ApplicationController
   def index
     @requests = Request.all
-    @request_projects = Rquestproject.where(request_id: @requests)
+    @request_projects = RequestProject.where(request_id: @requests)
   end
 
   def show

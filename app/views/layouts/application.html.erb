@@ -14,7 +14,7 @@
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
           <% if admin_signed_in? %>
-          <%= link_to "OFFING",admin_request_path(current_admin), class: 'mt-2 mb-3 text-dark' %>
+          <%= link_to "OFFING",admin_requests_path, class: 'mt-2 mb-3 text-dark' %>
           <% else %>
           <%= link_to "OFFING",root_path, class: 'mt-2 mb-3 text-dark' %>
           <% end %>
@@ -27,13 +27,13 @@
           <li class="nav-item"><%= link_to "ログアウト",destroy_member_session_path, method: :delete, class: 'text-dark' %></li>
           <% elsif admin_signed_in? %>
           <li class="nav-item"><%= link_to "イベント一覧",admin_projects_path, class: 'text-dark' %></li>
-          <li class="nav-item"><%= link_to "会員一覧",admin_customer_path, class: 'text-dark' %></li>
-          <li class="nav-item"><%= link_to "注文履歴一覧",admin_request_path, class: 'text-dark' %></li>
+          <li class="nav-item"><%= link_to "会員一覧",admin_members_path, class: 'text-dark' %></li>
+          <li class="nav-item"><%= link_to "注文履歴一覧",admin_requests_path, class: 'text-dark' %></li>
           <li class="nav-item"><%= link_to "ジャンル一覧",admin_genres_path, class: 'text-dark' %></li>
           <li class="nav-item"><%= link_to "ログアウト",destroy_admin_session_path,method: :delete, class: 'text-dark' %></li>
           <% else %>
           <li class="nav-item"><%= link_to "About",about_path, class: 'text-dark' %></li>
-          <li class="nav-item"><%= link_to "イベント一覧", projects_path, class: 'text-dark' %></li>
+          <li class="nav-item"><%= link_to "イベント一覧", admin_projects_path, class: 'text-dark' %></li>
           <li class="nav-item"><%= link_to "ログイン", new_member_session_path, class: 'text-dark' %></li>
           <li class="nav-item"><%= link_to "新規登録", new_member_registration_path, class: 'text-dark' %></li>
           <% end %>

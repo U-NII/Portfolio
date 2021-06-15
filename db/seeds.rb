@@ -9,3 +9,32 @@ Admin.create!(
   email: 'admin@icloud.com',
   password: "aaaaaa"
 )
+
+ Genre.create!(
+    name: "音楽",
+    is_valid: [['有効', true],['無効', false]]
+  )
+
+  Genre.create!(
+    name: "ゲーム",
+    is_valid: [['有効', true],['無効', false]]
+  )
+
+  Genre.create!(
+    name: "アニメ",
+    is_valid: [['有効', true],['無効', false]]
+  )
+
+  Genre.create!(
+    name: "旅行",
+    is_valid: [['有効', true],['無効', false]]
+  )
+
+  Project.create!(
+    name: "パンクライブ",
+    description: "パンクミュージックのライブです。",
+    price: "500",
+    genre_id: 1,
+    is_active: [['販売中', true], ['販売停止', false]],
+    image: open("./app/assets/images/punk.jpg")
+  )

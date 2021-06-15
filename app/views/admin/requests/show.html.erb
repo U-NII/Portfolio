@@ -1,1 +1,73 @@
-hello
+<p id="notice">
+<%= notice %>
+</p>
+<div class="container m-5">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <h4 class="my-4"><span style="background-color:#EFEFEF">　注文履歴詳細　</span></h4>
+  </div>
+  <table class="col-10">
+    <tr>
+      <th>購入者</th>
+      <th><%= @request.name %></th>
+    </tr>
+    <tr>
+      <th>参加申請日</th>
+      <th><%= @request.created_at.strftime('%Y/%m/%d') %></th>
+    </tr>
+    <tr>
+      <th>支払い方法</th>
+      <th><%= @order.payment_method %></th>
+    </tr>
+    <tr>
+      <th>注文ステータス</th>
+      <th><%= @request.status %></th>
+      <%= form_with(model: @order, url: admin_order_path, method: :patch, local: true, class: "form-row") do |f| %>
+      <th><%= f.select :status,Order.statuses.keys.map, class:"form-control form-control-sm col-6"  %></th>
+      <th><%= f.submit "更新", class: "btn btn-info" %></th>
+      <% end %>
+    </tr>
+  </table>
+  <table class="table my-md-5	">
+    <thead>
+      <tr>
+        <th scope="col">商品名</th>
+        <th scope="col">単価(税込)</th>
+        <th scope="col">数量</th>
+        <th scope="col">小計</th>
+        <th scope="col">制作ステータス</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @order_details.each do |order_detail| %>
+        <tr>
+          <td scope="col"><%= request_projects.project.name %></td>
+          <td scope="col"><%= ((request_project.price * 1.1).floor).to_s(:delimited) %></td>
+          <td scope="col"><%= request_project.quantity %></td>
+          <td scope="col"><%= ((request_project.price * request_project.quantity * 1.1).floor).to_s(:delimited) %></td>
+          <td scope="col"><%= request_project.production_status %></td>
+            <%= form_with(model: request_project, url: admin_request_project_path(request_project.id), method: :patch, local: true, class: "form-row") do |f| %>
+              <td scope="col"><%= f.select :production_status,OrdersDetail.production_statuses.keys.map, class:"form-control form-control-sm col-6" %></td>
+              <td scope="col"><%= f.submit "更新", class: "btn btn-info" %></td>
+            <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <table>
+    <tr>
+      <th>商品合計</th>
+      <th><%= total_price(@request_projects).to_s(:delimited) %>円</th>
+    </tr>
+    <tr>
+      <th>送料</th>
+      <th>800円</th>
+    </tr>
+    <tr>
+      <th>請求金額合計</th>
+      <th><%= @request.billing_amount.to_s(:delimited) %>円</th>
+    </tr>
+  </table>
+</div>

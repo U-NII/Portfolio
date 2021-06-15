@@ -1,0 +1,31 @@
+<div class="container">
+  <div calss="row">
+    <div class="col-xs-12">
+      <h4 class="my-4"><span style="background-color:#EFEFEF">　注文履歴一覧　</span></h4>
+      <% if @repuests.present? %>
+      <table class="table table-hover table-bordered table-condensed">
+        <thead>
+          <tr class="info">
+            <th>購入日時</th>
+            <th>購入者</th>
+            <th>注文個数</th>
+            <th>注文ステータス</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @requests.each do |request| %>
+            <tr>
+              <td><%= request.created_at.strftime('%Y/%m/%d') %></td>
+              <td class="text-left"><%= link_to request.name, admin_request_path(order) %></td>
+              <td class="text-left"><%= request.request_projects.sum(:quantity) %></td>
+              <td class="text-left"><%= request.status %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <% else %>
+      <p>注文履歴がありません。</p>
+      <% end %>
+    </div>
+  </div>
+</div>

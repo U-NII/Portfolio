@@ -10,39 +10,31 @@ Rails.application.routes.draw do
      :sessions => 'members/sessions'
    }
   root to: "public/homes#top"
-  get "public/home/about" => "public/homes#about"
-  
+  get "public/home/about" => "public/homes#about" ,as: "about"
+
   namespace :admin do
     root to: 'homes#top'
-    resources :customers, only: [:index, :show, :edit, :update]
-    resources :genres, only: [:index, :create, :edit, :update]
-    resources :projects, only: [:index, :show, :new, :create, :edit, :update]
-    resources :requests, only: [:show, :update] do
-      resources :request_datails, only: [:update]
-    end
+    resources :members, only: [:index, :show, :edit, :update]
+    resources :genres, only:[:index,:create,:edit,:update,:destroy,:show]
+    resources :projects
+    resources :requests
+    resources :request_projects
 end
 
-scope module: :public do
-    root to: "public/homes#top", as: "top"
-    get "public/home/about" => "public/homes#about" ,as: "about"
-    resources :projects, only: [:index, :show]
-    delete 'cart_projects/destroy_all' => 'cart_products#destroy_all'
-    resources :cart_products, only: [:index, :create, :update, :destroy ]
-    delete 'cart_products/:id' => 'cart_products#destroy', as: 'destroy_cart_project'
-    resources :requests, only: [:index, :show, :create, :new] do
-      collection do
-        post :confirm
-        get :complete
-      end
-    end
-    resources :members, only: [:show, :edit, :update] do
-      member do
-        get :quit_confirm
-        patch :quit
-      end
-    end
+ namespace :public do
+    put "/members/:id/hide" => "members#hide", as: 'members_hide'
+    get "/members/:id/withdrawal" => "members#withdrawal", as: 'members_withdrawal'
+    post "/members/request_confirm" => "requests#request_confirm", as: 'order_confirm'
+    get  "/members/complete" => "requests#complete", as: 'complete'
+    root to: "homes#top"
+    resources :homes
+    delete 'cart_projects/all_destroy' => 'cart_projects#all_destroy'
+    resources :cart_projects, only:[:index, :create, :update, :destroy]
+    resources :members
+    resources :requests
+    resources :projects
+  end
 
-    end
 end
 
 

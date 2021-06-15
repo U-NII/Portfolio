@@ -1,0 +1,18 @@
+<div class="shiba-background">
+  <div class="container">
+    <div class="row">
+      <h2 class="col-3 align-self-start text-center text-white bg-secondary mt-4">新規商品登録</h2>
+      <div class="col-12">
+        <div class="col text-center text-white product_new_edit">
+        <%= form_with model:@project, url: admin_projects_path, local:true, method: :post, class: "form-horizontal" do |f| %>
+          <%= render "layouts/error_messages", resource: @project %>
+          <%= render "form_new_project", f: f %>
+        </div>
+        <div class="col text-center">
+          <%= f.submit "新規登録", class: "btn btn-success btn-lg text-center" %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
