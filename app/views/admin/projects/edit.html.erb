@@ -1,0 +1,18 @@
+  <div class="shiba-background">
+    <div class="container">
+      <div class="row">
+        <h2 class="col-2 align-self-start text-center text-white bg-secondary mt-4">商品編集</h2>
+        <div class="col-12">
+          <div class="col text-center text-white product_new_edit">
+          <%= form_with model:@project, url: admin_project_path, method: :patch, local:true, class: "form-horizontal" do |f| %>
+            <%= render "layouts/error_messages", resource: @project%>
+            <%= render "form_new_project", f: f %>
+            <div class="col text-center">
+              <%= f.submit "変更を保存", class: "btn btn-primary pull-right" %>
+            </div>
+          <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
