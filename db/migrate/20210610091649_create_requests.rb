@@ -7,6 +7,7 @@ class CreateRequests < ActiveRecord::Migration[5.2]
       t.integer :total_price
       t.string :name
       t.integer :buy_status, default: 0
+      t.string :telephone_number
 
       t.timestamps
     end

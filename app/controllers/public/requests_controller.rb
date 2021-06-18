@@ -1,6 +1,6 @@
 class Public::RequestsController < ApplicationController
   def index
-    @requests = current_member.repuests
+    @requests = Request.all
   end
 
   def new
@@ -13,8 +13,8 @@ class Public::RequestsController < ApplicationController
     @request = Request.find(params[:id])
   end
 
-  def confirm
-    @cart_project = current_member.cart_projects
+  def request_confirm
+    @cart_projects = current_member.cart_projects
     @sub_total = 0
 
     @cart_projects.each do |cart|
@@ -23,9 +23,12 @@ class Public::RequestsController < ApplicationController
 
     @request = Request.new
     @request.member_id = current_member.id
+    @request.name = current_member.first_name + current_member.last_name
     @request.buy_status = 0
-    @request.shipping_cost = 800
+    @request.shipping_cost = 500
+    @request.total_price = @sub_total + @request.shipping_cost
     @request.pay_type = params[:request][:pay_type]
+
 
     #@request_address = params[:request][:address_option]
 
@@ -65,13 +68,14 @@ class Public::RequestsController < ApplicationController
   def create
     @request = Request.new(request_params)
     @request.member_id = current_member.id
-    @request.total_price = @request.cal_price(current_member)
-    @order.shipping_cost = 800
-    @order.save
+    @request.total_price = @request.total_price
+    @request.shipping_cost = 500
+    @request.save
 
-    request_details_maker(@request)
 
-    redirect_to complete_request_path
+    #request_projects_maker(@request)
+
+    redirect_to public_complete_path
   end
 
   def complete
@@ -81,10 +85,10 @@ class Public::RequestsController < ApplicationController
 
   def request_projects_maker(request)
 
-    cart_project = current_member.cart_request
+    cart_project = current_member.cart_projects
 
     cart_project.each do |cart_project|
-      request_projects = RquestProject.new
+      request_projects = RequestProject.new
 
       request_projects.project_id = cart_project.request_id
       request_projects.request_id = request.id
@@ -99,7 +103,7 @@ class Public::RequestsController < ApplicationController
   end
 
   def request_params
-    params.require(:request).permit(:pay_type, :name, :total_price )
+    params.require(:request).permit(:pay_type, :name, :total_price, :telephone_number )
   end
 
 end

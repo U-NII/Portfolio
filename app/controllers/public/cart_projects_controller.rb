@@ -1,7 +1,7 @@
 class Public::CartProjectsController < ApplicationController
       before_action :authenticate_member!
   def index
-    @cart_project = CartProject.all
+    @cart_projects = CartProject.all
     @total_price = @cart_projects.sum{|cart_project|cart_project.project.price * cart_project.quantity * 1.10}
   end
 

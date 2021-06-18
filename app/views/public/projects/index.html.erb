@@ -1,0 +1,16 @@
+  <div class="shiba-background">
+    <div class="container">
+      <div class="row">
+          <h2 class="col-3 align-self-start text-center text-white bg-secondary mt-4">商品一覧(全<%= @projects.total_count %>件)</h2>
+          <div class="col-12">
+            <div class="d-inline-flex flex-row flex-wrap product_index p-4">
+              <% @projects.each do |project| %>
+                <%= render "product_individual", project: project %>
+
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <%= paginate(@projects) %>
+    </div>
+  </div>
