@@ -1,0 +1,30 @@
+  <div class="shiba-background">
+    <div class="container">
+      <div class="row">
+        <div class="row align-items-center">
+          <%= attachment_image_tag(@project, :image, size: "340x220", fallback: "no_image.jpg" ) %>
+        </div>
+        <div class="col-4 offset-1 product_show pt-2 pb-2">
+          <h2><%= @project.name %></h2><br>
+          <h4><%= @project.description %></h4><br>
+          <h3>¥ <%= tax_price(@project.price).to_s(:delimited) %>
+          <h3>¥ <%= (@project.price * 1.1).floor.to_s(:delimited) %>
+            <span>(税込)</span>
+          </h3><br>
+          <% if @project.is_active == true %>
+            <% if @project.genre.is_valid == true %>
+              <%= form_with model:@cart_project , url: public_cart_projects_path, method: :post, local:true do |f| %>
+                <%= f.hidden_field :project_id, value: @project.id %>
+                <%= f.select :quantity, options_for_select((1..10).to_a), include_blank: "個数選択" %>
+                <%= f.submit "カートに入れる", class: "glyphicon glyphicon-shopping-cart btn btn-primary" %>
+              <% end %>
+            <% else %>
+              <h3>売り切れ中</h3>
+            <% end %>
+          <% elsif @project.is_active == false %>
+            <h3>売り切れ中</h3>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
