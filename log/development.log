@@ -9727,3 +9727,1179 @@ Processing by Public::RequestsController#index as HTML
 Completed 200 OK in 244ms (Views: 241.3ms | ActiveRecord: 1.3ms)
 
 
+Started GET "/public/requests" for 153.139.136.16 at 2021-06-19 02:10:41 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::RequestsController#index as HTML
+  Rendering public/requests/index.html.erb within layouts/application
+  [1m[36mRequest Load (0.2ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/public/requests/index.html.erb:17
+  [1m[36mRequestProject Load (0.6ms)[0m  [1m[34mSELECT "request_projects".* FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 1]]
+  ↳ app/views/public/requests/index.html.erb:24
+  [1m[36mRequestProject Load (0.1ms)[0m  [1m[34mSELECT "request_projects".* FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 2]]
+  ↳ app/views/public/requests/index.html.erb:24
+  [1m[36mRequestProject Load (0.1ms)[0m  [1m[34mSELECT "request_projects".* FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 3]]
+  ↳ app/views/public/requests/index.html.erb:24
+  [1m[36mRequestProject Load (0.1ms)[0m  [1m[34mSELECT "request_projects".* FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 4]]
+  ↳ app/views/public/requests/index.html.erb:24
+  [1m[36mRequestProject Load (0.1ms)[0m  [1m[34mSELECT "request_projects".* FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 5]]
+  ↳ app/views/public/requests/index.html.erb:24
+  Rendered public/requests/index.html.erb within layouts/application (45.1ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 780ms (Views: 760.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 153.139.136.16 at 2021-06-19 02:10:46 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/public/homes/top.html.erb:19
+  Rendered public/homes/top.html.erb within layouts/application (90.9ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 204ms (Views: 197.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/attachments/eb8e91f5ead9119272cbf8e5b44896626d1f712a/store/fill/200/150/5079f175174ffead0c01cad80c1824d5671bb528c12b1edb1bf2792c5430/image" for 153.139.136.16 at 2021-06-19 02:10:47 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-06-19 02:10:47 +0000] GET "/eb8e91f5ead9119272cbf8e5b44896626d1f712a/store/fill/200/150/5079f175174ffead0c01cad80c1824d5671bb528c12b1edb1bf2792c5430/image" 200 147.7ms
+
+Started GET "/" for 153.139.136.16 at 2021-06-19 12:25:34 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/public/homes/top.html.erb:19
+  Rendered public/homes/top.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 126ms (Views: 122.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 153.139.136.16 at 2021-06-19 12:25:36 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/public/homes/top.html.erb:19
+  Rendered public/homes/top.html.erb within layouts/application (2.8ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 55ms (Views: 53.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/eb8e91f5ead9119272cbf8e5b44896626d1f712a/store/fill/200/150/5079f175174ffead0c01cad80c1824d5671bb528c12b1edb1bf2792c5430/image" for 153.139.136.16 at 2021-06-19 12:25:38 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-06-19 12:25:38 +0000] GET "/eb8e91f5ead9119272cbf8e5b44896626d1f712a/store/fill/200/150/5079f175174ffead0c01cad80c1824d5671bb528c12b1edb1bf2792c5430/image" 200 135.1ms
+
+Started GET "/public/members/1" for 153.139.136.16 at 2021-06-19 12:25:43 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MembersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/members_controller.rb:4
+  Rendering public/members/show.html.erb within layouts/application
+  Rendered public/members/show.html.erb within layouts/application (0.9ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 56ms (Views: 52.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/public/projects" for 153.139.136.16 at 2021-06-19 12:25:45 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ProjectsController#index as HTML
+  Rendering public/projects/index.html.erb within layouts/application
+  [1m[35m (9.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."is_active" = ?[0m  [["is_active", 1]]
+  ↳ app/views/public/projects/index.html.erb:4
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."is_active" = ? LIMIT ? OFFSET ?[0m  [["is_active", 1], ["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/public/projects/index.html.erb:7
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/projects/_product_individual.html.erb:2
+  Rendered public/projects/_product_individual.html.erb (14.4ms)
+  Rendered public/projects/index.html.erb within layouts/application (33.7ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 90ms (Views: 73.7ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/attachments/88214f61d3e2a5add8598a45fcdb78485041c275/store/5079f175174ffead0c01cad80c1824d5671bb528c12b1edb1bf2792c5430/image" for 153.139.136.16 at 2021-06-19 12:25:45 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-06-19 12:25:45 +0000] GET "/88214f61d3e2a5add8598a45fcdb78485041c275/store/5079f175174ffead0c01cad80c1824d5671bb528c12b1edb1bf2792c5430/image" 200 5.9ms
+
+Started GET "/public/cart_projects" for 153.139.136.16 at 2021-06-19 12:25:47 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CartProjectsController#index as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCartProject Load (0.1ms)[0m  [1m[34mSELECT "cart_projects".* FROM "cart_projects"[0m
+  ↳ app/controllers/public/cart_projects_controller.rb:5
+  Rendering public/cart_projects/index.html.erb within layouts/application
+  [1m[36mCartProject Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "cart_projects" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/public/cart_projects/index.html.erb:4
+  Rendered public/cart_projects/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 75ms (Views: 67.3ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/members/sign_out" for 153.139.136.16 at 2021-06-19 12:25:52 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Members::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eqSfnUmdbP6HLEJB25UlVOWhABiSVDMBNXFcMMK9faQAtOsEsmJHTD1d1Ab5EdyGAAoaGUVcE2vfzpZKiZFU+w=="}
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://aeda2ff083be4f749e28bc0fda130121.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 11ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 153.139.136.16 at 2021-06-19 12:25:52 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/public/homes/top.html.erb:19
+  Rendered public/homes/top.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 55ms (Views: 53.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/public/projects" for 153.139.136.16 at 2021-06-19 12:25:56 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ProjectsController#index as HTML
+  Rendering public/projects/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."is_active" = ?[0m  [["is_active", 1]]
+  ↳ app/views/public/projects/index.html.erb:4
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."is_active" = ? LIMIT ? OFFSET ?[0m  [["is_active", 1], ["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/public/projects/index.html.erb:7
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/projects/_product_individual.html.erb:2
+  Rendered public/projects/_product_individual.html.erb (2.4ms)
+  Rendered public/projects/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 73ms (Views: 71.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/public/projects/1" for 153.139.136.16 at 2021-06-19 12:25:58 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/projects_controller.rb:10
+  Rendering public/projects/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/projects/show.html.erb:15
+  Rendered public/projects/show.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 70ms (Views: 62.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/public/cart_projects" for 153.139.136.16 at 2021-06-19 12:26:00 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CartProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9D1utHrCrfJF7YJrDvyUTCwt3z8Nle5nh0s5phn0bybdCnwda4+2hu/YWz7ZDx0wwsXULcl4gZo+KOyNLWRypw==", "cart_project"=>{"project_id"=>"1", "quantity"=>""}, "commit"=>"カートに入れる"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/members/sign_in" for 153.139.136.16 at 2021-06-19 12:26:00 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Members::SessionsController#new as HTML
+  Rendering members/sessions/new.html.erb within layouts/application
+  Rendered members/shared/_links.html.erb (1.0ms)
+  Rendered members/sessions/new.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 63ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 153.139.136.16 at 2021-06-19 12:26:03 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/public/homes/top.html.erb:19
+  Rendered public/homes/top.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 68ms (Views: 66.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admins/sign_in" for 153.139.136.16 at 2021-06-19 12:26:15 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 62ms (Views: 54.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admins/sign_in" for 153.139.136.16 at 2021-06-19 12:26:21 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jhEufwnJ+9kFOyCtPzePE/jc8QlvsB2N+Py5KxV/jKZAGSq//G0i/ZMZgC/Rb78zG+JtwzkUm/LSKAF+9Q1MSg==", "admin"=>{"email"=>"admin@icloud.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@icloud.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://aeda2ff083be4f749e28bc0fda130121.vfs.cloud9.us-east-2.amazonaws.com/admin/requests
+Completed 302 Found in 333ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/requests" for 153.139.136.16 at 2021-06-19 12:26:21 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/application
+  Rendered admin/requests/index.html.erb within layouts/application (0.6ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 55ms (Views: 53.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/requests" for 153.139.136.16 at 2021-06-19 12:26:29 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/application
+  Rendered admin/requests/index.html.erb within layouts/application (0.7ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 69ms (Views: 67.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/members" for 153.139.136.16 at 2021-06-19 12:26:30 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::MembersController#index as HTML
+  Rendering admin/members/index.html.erb within layouts/application
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  ↳ app/views/admin/members/index.html.erb:17
+  Rendered admin/members/index.html.erb within layouts/application (2.3ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 54ms (Views: 52.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/members/1" for 153.139.136.16 at 2021-06-19 12:26:32 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::MembersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/members_controller.rb:8
+  Rendering admin/members/show.html.erb within layouts/application
+  Rendered admin/members/show.html.erb within layouts/application (10.2ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `postal_code' for #<Member:0x00007fd6f8820470>):
+    20:       </tr>
+    21:       <tr>
+    22:         <th>郵便番号</th>
+    23:         <th><%= @member.postal_code %></th>
+    24:       </tr>
+    25:       <tr>
+    26:         <th>住所</th>
+  
+app/views/admin/members/show.html.erb:23:in `_app_views_admin_members_show_html_erb__1931900012739601513_70280697387380'
+Started GET "/admin/members" for 153.139.136.16 at 2021-06-19 12:26:34 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::MembersController#index as HTML
+  Rendering admin/members/index.html.erb within layouts/application
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  ↳ app/views/admin/members/index.html.erb:17
+  Rendered admin/members/index.html.erb within layouts/application (2.3ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 54ms (Views: 53.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/projects" for 153.139.136.16 at 2021-06-19 12:26:36 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering admin/projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/admin/projects/index.html.erb:22
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/projects/index.html.erb:36
+  Rendered admin/projects/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 56ms (Views: 53.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/members" for 153.139.136.16 at 2021-06-19 12:26:39 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::MembersController#index as HTML
+  Rendering admin/members/index.html.erb within layouts/application
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  ↳ app/views/admin/members/index.html.erb:17
+  Rendered admin/members/index.html.erb within layouts/application (7.9ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 86ms (Views: 84.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/requests" for 153.139.136.16 at 2021-06-19 12:26:39 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/application
+  Rendered admin/requests/index.html.erb within layouts/application (0.6ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 53ms (Views: 52.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/genres" for 153.139.136.16 at 2021-06-19 12:26:41 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering admin/genres/index.html.erb within layouts/application
+  [1m[36mGenre Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "genres" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/admin/genres/index.html.erb:15
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admin/genres/index.html.erb:22
+  Rendered admin/genres/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 71ms (Views: 67.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/requests" for 153.139.136.16 at 2021-06-19 12:26:44 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/application
+  Rendered admin/requests/index.html.erb within layouts/application (0.6ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 52ms (Views: 50.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/members" for 153.139.136.16 at 2021-06-19 12:26:48 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::MembersController#index as HTML
+  Rendering admin/members/index.html.erb within layouts/application
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  ↳ app/views/admin/members/index.html.erb:17
+  Rendered admin/members/index.html.erb within layouts/application (2.2ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 54ms (Views: 53.3ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/admins/sign_out" for 153.139.136.16 at 2021-06-19 12:28:46 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gAeTP+PaVU8Iu8w0whK3KMwfLwYIfKkGLc6WxFQQEUyTn1HwJ4GnsUQAn/55LeqtDx1JAK6d5fhrMUBAo3U8qg=="}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://aeda2ff083be4f749e28bc0fda130121.vfs.cloud9.us-east-2.amazonaws.com/admins/sign_in
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admins/sign_in" for 153.139.136.16 at 2021-06-19 12:28:46 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 77ms (Views: 75.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 153.139.136.16 at 2021-06-19 12:28:54 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/public/homes/top.html.erb:19
+  Rendered public/homes/top.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 52ms (Views: 50.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/members/sign_in" for 153.139.136.16 at 2021-06-19 12:28:57 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Members::SessionsController#new as HTML
+  Rendering members/sessions/new.html.erb within layouts/application
+  Rendered members/shared/_links.html.erb (0.8ms)
+  Rendered members/sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 67ms (Views: 65.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/members/sign_in" for 153.139.136.16 at 2021-06-19 12:29:09 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Members::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YqvK4d476Ki4cCHquGzHJna6miT/2TMeDmob6RDzIGl0TDAtpUYvRadalEs6pnOkxcrOH5uNJ5aR3CiRx04MlA==", "member"=>{"email"=>"aa@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."email" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["email", "aa@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://aeda2ff083be4f749e28bc0fda130121.vfs.cloud9.us-east-2.amazonaws.com/public/members/1
+Completed 302 Found in 311ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/public/members/1" for 153.139.136.16 at 2021-06-19 12:29:09 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MembersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/members_controller.rb:4
+  Rendering public/members/show.html.erb within layouts/application
+  Rendered public/members/show.html.erb within layouts/application (0.9ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 54ms (Views: 51.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/public/cart_projects" for 153.139.136.16 at 2021-06-19 12:29:12 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CartProjectsController#index as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCartProject Load (0.1ms)[0m  [1m[34mSELECT "cart_projects".* FROM "cart_projects"[0m
+  ↳ app/controllers/public/cart_projects_controller.rb:5
+  Rendering public/cart_projects/index.html.erb within layouts/application
+  [1m[36mCartProject Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "cart_projects" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/public/cart_projects/index.html.erb:4
+  Rendered public/cart_projects/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 58ms (Views: 52.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/public/projects" for 153.139.136.16 at 2021-06-19 12:29:14 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ProjectsController#index as HTML
+  Rendering public/projects/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."is_active" = ?[0m  [["is_active", 1]]
+  ↳ app/views/public/projects/index.html.erb:4
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."is_active" = ? LIMIT ? OFFSET ?[0m  [["is_active", 1], ["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/public/projects/index.html.erb:7
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/projects/_product_individual.html.erb:2
+  Rendered public/projects/_product_individual.html.erb (2.5ms)
+  Rendered public/projects/index.html.erb within layouts/application (7.9ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 73ms (Views: 71.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/public/projects/1" for 153.139.136.16 at 2021-06-19 12:29:16 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/projects_controller.rb:10
+  Rendering public/projects/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/projects/show.html.erb:15
+  Rendered public/projects/show.html.erb within layouts/application (3.6ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 78ms (Views: 75.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/public/cart_projects" for 153.139.136.16 at 2021-06-19 12:29:21 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CartProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HksdUmnYHb77hVXUwRH1hV53iYPbnHK/xgRECQD3vakURsL6gAzPO0goO+qYlWHxGd3TaKWddhV4ovqwP0lVww==", "cart_project"=>{"project_id"=>"1", "quantity"=>"1"}, "commit"=>"カートに入れる"}
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_projects_controller.rb:10
+  [1m[36mCartProject Load (0.3ms)[0m  [1m[34mSELECT "cart_projects".* FROM "cart_projects" WHERE "cart_projects"."member_id" = ?[0m  [["member_id", 1]]
+  ↳ app/controllers/public/cart_projects_controller.rb:14
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/cart_projects_controller.rb:21
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_projects_controller.rb:21
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_projects_controller.rb:21
+  [1m[36mCartProject Create (0.5ms)[0m  [1m[32mINSERT INTO "cart_projects" ("member_id", "project_id", "quantity", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["member_id", 1], ["project_id", 1], ["quantity", 1], ["created_at", "2021-06-19 12:29:21.073943"], ["updated_at", "2021-06-19 12:29:21.073943"]]
+  ↳ app/controllers/public/cart_projects_controller.rb:21
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/cart_projects_controller.rb:21
+Redirected to https://aeda2ff083be4f749e28bc0fda130121.vfs.cloud9.us-east-2.amazonaws.com/public/cart_projects
+Completed 302 Found in 25ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/public/cart_projects" for 153.139.136.16 at 2021-06-19 12:29:21 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CartProjectsController#index as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCartProject Load (0.1ms)[0m  [1m[34mSELECT "cart_projects".* FROM "cart_projects"[0m
+  ↳ app/controllers/public/cart_projects_controller.rb:5
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_projects_controller.rb:5
+  Rendering public/cart_projects/index.html.erb within layouts/application
+  [1m[36mCartProject Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "cart_projects" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/public/cart_projects/index.html.erb:4
+  Rendered public/cart_projects/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 127ms (Views: 121.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/public/requests/new" for 153.139.136.16 at 2021-06-19 12:29:25 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RequestsController#new as HTML
+  Rendering public/requests/new.html.erb within layouts/application
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/requests/new.html.erb:33
+  Rendered public/requests/new.html.erb within layouts/application (74.8ms)
+Completed 200 OK in 127ms (Views: 125.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/public/members/request_confirm" for 153.139.136.16 at 2021-06-19 12:29:30 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RequestsController#request_confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CsPqXDhCgCYPHSafl4HC8YckLyb9kHTqJUXU+Ob4qKqZ63Cig6eNWKE8f595PM5pA0bzISDIK/yLDUgRG9Qjbg==", "request"=>{"pay_type"=>"クレジットカード", "entrys_option"=>"1", "telephone_number"=>"", "name"=>""}, "commit"=>"確認画面に進む"}
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/requests_controller.rb:17
+  [1m[36mCartProject Load (0.1ms)[0m  [1m[34mSELECT "cart_projects".* FROM "cart_projects" WHERE "cart_projects"."member_id" = ?[0m  [["member_id", 1]]
+  ↳ app/controllers/public/requests_controller.rb:20
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/requests_controller.rb:21
+  Rendering public/requests/request_confirm.html.erb within layouts/application
+  Rendered public/requests/request_confirm.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 75ms (Views: 68.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/public/requests" for 153.139.136.16 at 2021-06-19 12:29:32 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vfh6i/6qFthQqcWDXS2rhkhRDPrI0+ZzEW8XocsVGH2dLYkMQ8RVbPJsF6niJ6BmovYk7vBpC/7NzW7qcFGEwg==", "request"=>{"pay_type"=>"クレジットカード", "telephone_number"=>"090112345678", "name"=>"唖々嗚呼", "total_price"=>"1050"}, "commit"=>"注文を確定する"}
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/requests_controller.rb:70
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/requests_controller.rb:73
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/requests_controller.rb:73
+  [1m[36mRequest Create (0.4ms)[0m  [1m[32mINSERT INTO "requests" ("member_id", "shipping_cost", "total_price", "name", "telephone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["member_id", 1], ["shipping_cost", 500], ["total_price", 1050], ["name", "唖々嗚呼"], ["telephone_number", "090112345678"], ["created_at", "2021-06-19 12:29:32.758748"], ["updated_at", "2021-06-19 12:29:32.758748"]]
+  ↳ app/controllers/public/requests_controller.rb:73
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/requests_controller.rb:73
+Redirected to https://aeda2ff083be4f749e28bc0fda130121.vfs.cloud9.us-east-2.amazonaws.com/public/members/complete
+Completed 302 Found in 13ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/public/members/complete" for 153.139.136.16 at 2021-06-19 12:29:32 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RequestsController#complete as HTML
+  Rendering public/requests/complete.html.erb within layouts/application
+  Rendered public/requests/complete.html.erb within layouts/application (0.4ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 53ms (Views: 52.1ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/members/sign_out" for 153.139.136.16 at 2021-06-19 12:29:36 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Members::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"20vIhB89q72Uxa9b6wtY0qOi+luECtTQLNm/q/D9a3UTnjsDolPoCTYAfXFUAVMySQXST7ywOV3we8bgS7n3yg=="}
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://aeda2ff083be4f749e28bc0fda130121.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 153.139.136.16 at 2021-06-19 12:29:36 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/public/homes/top.html.erb:19
+  Rendered public/homes/top.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 71ms (Views: 70.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admins/sign_in" for 153.139.136.16 at 2021-06-19 12:29:47 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 55ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in" for 153.139.136.16 at 2021-06-19 12:29:52 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AxmthU3RG1xGzkFwjoKVu8A3yvtNLxNoQy2Q8UhXTznaMbn2du9dOXFlLS2bHV6hz4H1AGOeZtMGv7C8/sCBhw==", "admin"=>{"email"=>"admin@icloud.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@icloud.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://aeda2ff083be4f749e28bc0fda130121.vfs.cloud9.us-east-2.amazonaws.com/admin/requests
+Completed 302 Found in 306ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/requests" for 153.139.136.16 at 2021-06-19 12:29:52 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/application
+  Rendered admin/requests/index.html.erb within layouts/application (0.6ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 54ms (Views: 52.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/requests" for 153.139.136.16 at 2021-06-19 12:29:55 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/application
+  Rendered admin/requests/index.html.erb within layouts/application (0.7ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 68ms (Views: 67.1ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/admins/sign_out" for 153.139.136.16 at 2021-06-19 12:30:37 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wPPDxVcpo1rp3F34MLqZMdXPJ25u+py5OasNQjU2XtH/2o8NtWTyppHXGetGTrYavgAVt/jpPwIPNldGkO1gag=="}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://aeda2ff083be4f749e28bc0fda130121.vfs.cloud9.us-east-2.amazonaws.com/admins/sign_in
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admins/sign_in" for 153.139.136.16 at 2021-06-19 12:30:38 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 52ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 153.139.136.16 at 2021-06-19 12:30:49 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/public/homes/top.html.erb:19
+  Rendered public/homes/top.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 65ms (Views: 63.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/members/sign_in" for 153.139.136.16 at 2021-06-19 12:30:52 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Members::SessionsController#new as HTML
+  Rendering members/sessions/new.html.erb within layouts/application
+  Rendered members/shared/_links.html.erb (0.8ms)
+  Rendered members/sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 57ms (Views: 56.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/members/sign_in" for 153.139.136.16 at 2021-06-19 12:30:58 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Members::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hJaaZaCKD0tfYeRbe+T6O1RK5hEphuEmQxTVW3qK/OKoPzJpVCvzgLoqkf7EP/C/paIq3SnLrYm2js7yFGyopg==", "member"=>{"email"=>"aa@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."email" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["email", "aa@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://aeda2ff083be4f749e28bc0fda130121.vfs.cloud9.us-east-2.amazonaws.com/public/members/1
+Completed 302 Found in 311ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/public/members/1" for 153.139.136.16 at 2021-06-19 12:30:58 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MembersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/members_controller.rb:4
+  Rendering public/members/show.html.erb within layouts/application
+  Rendered public/members/show.html.erb within layouts/application (1.0ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 67ms (Views: 64.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/public/cart_projects" for 153.139.136.16 at 2021-06-19 12:31:05 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CartProjectsController#index as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCartProject Load (0.1ms)[0m  [1m[34mSELECT "cart_projects".* FROM "cart_projects"[0m
+  ↳ app/controllers/public/cart_projects_controller.rb:5
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_projects_controller.rb:5
+  Rendering public/cart_projects/index.html.erb within layouts/application
+  [1m[36mCartProject Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "cart_projects" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/public/cart_projects/index.html.erb:4
+  Rendered public/cart_projects/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 65ms (Views: 52.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/public/requests/new" for 153.139.136.16 at 2021-06-19 12:31:13 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RequestsController#new as HTML
+  Rendering public/requests/new.html.erb within layouts/application
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/requests/new.html.erb:33
+  Rendered public/requests/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 65ms (Views: 64.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/public/members/request_confirm" for 153.139.136.16 at 2021-06-19 12:31:16 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RequestsController#request_confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jaLmotr5Cb/GSgUBTAVIDAThbdNNXCfUbxINE4Z+TUSU17R7IhxjRRD0ayFbYG0CtdYSYyvn6+4wEINwbpDLMA==", "request"=>{"pay_type"=>"クレジットカード", "entrys_option"=>"1", "telephone_number"=>"", "name"=>""}, "commit"=>"確認画面に進む"}
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/requests_controller.rb:17
+  [1m[36mCartProject Load (0.1ms)[0m  [1m[34mSELECT "cart_projects".* FROM "cart_projects" WHERE "cart_projects"."member_id" = ?[0m  [["member_id", 1]]
+  ↳ app/controllers/public/requests_controller.rb:20
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/requests_controller.rb:21
+  Rendering public/requests/request_confirm.html.erb within layouts/application
+  Rendered public/requests/request_confirm.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 58ms (Views: 51.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/public/requests" for 153.139.136.16 at 2021-06-19 12:31:17 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TjtkegOsJ5CMPzXTjgJ+kzSwRE7h6MWBVhy79/uxKpWd+q23WjLfqb4kzJhTuAfpiKD8gGA8k5XTec6MEUlr6Q==", "request"=>{"pay_type"=>"クレジットカード", "telephone_number"=>"090112345678", "name"=>"唖々嗚呼", "total_price"=>"1050"}, "commit"=>"注文を確定する"}
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/requests_controller.rb:70
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/requests_controller.rb:73
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/requests_controller.rb:73
+  [1m[36mRequest Create (0.4ms)[0m  [1m[32mINSERT INTO "requests" ("member_id", "shipping_cost", "total_price", "name", "telephone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["member_id", 1], ["shipping_cost", 500], ["total_price", 1050], ["name", "唖々嗚呼"], ["telephone_number", "090112345678"], ["created_at", "2021-06-19 12:31:17.961752"], ["updated_at", "2021-06-19 12:31:17.961752"]]
+  ↳ app/controllers/public/requests_controller.rb:73
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/requests_controller.rb:73
+Redirected to https://aeda2ff083be4f749e28bc0fda130121.vfs.cloud9.us-east-2.amazonaws.com/public/members/complete
+Completed 302 Found in 12ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/public/members/complete" for 153.139.136.16 at 2021-06-19 12:31:18 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RequestsController#complete as HTML
+  Rendering public/requests/complete.html.erb within layouts/application
+  Rendered public/requests/complete.html.erb within layouts/application (0.4ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 64ms (Views: 63.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/public/members/1" for 153.139.136.16 at 2021-06-19 12:31:21 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MembersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/members_controller.rb:4
+  Rendering public/members/show.html.erb within layouts/application
+  Rendered public/members/show.html.erb within layouts/application (0.9ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 57ms (Views: 50.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/public/requests" for 153.139.136.16 at 2021-06-19 12:31:23 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RequestsController#index as HTML
+  Rendering public/requests/index.html.erb within layouts/application
+  [1m[36mRequest Load (0.2ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/public/requests/index.html.erb:17
+  [1m[36mRequestProject Load (0.1ms)[0m  [1m[34mSELECT "request_projects".* FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 1]]
+  ↳ app/views/public/requests/index.html.erb:24
+  [1m[36mRequestProject Load (0.1ms)[0m  [1m[34mSELECT "request_projects".* FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 2]]
+  ↳ app/views/public/requests/index.html.erb:24
+  [1m[36mRequestProject Load (0.1ms)[0m  [1m[34mSELECT "request_projects".* FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 3]]
+  ↳ app/views/public/requests/index.html.erb:24
+  [1m[36mRequestProject Load (0.1ms)[0m  [1m[34mSELECT "request_projects".* FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 4]]
+  ↳ app/views/public/requests/index.html.erb:24
+  [1m[36mRequestProject Load (0.1ms)[0m  [1m[34mSELECT "request_projects".* FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 5]]
+  ↳ app/views/public/requests/index.html.erb:24
+  [1m[36mRequestProject Load (0.1ms)[0m  [1m[34mSELECT "request_projects".* FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 6]]
+  ↳ app/views/public/requests/index.html.erb:24
+  [1m[36mRequestProject Load (0.1ms)[0m  [1m[34mSELECT "request_projects".* FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 7]]
+  ↳ app/views/public/requests/index.html.erb:24
+  Rendered public/requests/index.html.erb within layouts/application (13.7ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 77ms (Views: 75.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 153.139.136.16 at 2021-06-19 12:31:39 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/public/homes/top.html.erb:19
+  Rendered public/homes/top.html.erb within layouts/application (2.7ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 55ms (Views: 54.0ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/members/sign_out" for 153.139.136.16 at 2021-06-19 12:31:44 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Members::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dnzRJ9OvPgkUPFOgFNGtJ/OYBKpUYOLB+0f/v5PhIuClvRjqijHGMCYnquvJa9RdT4i8ZNW0tNV+IorEeRljnA=="}
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://aeda2ff083be4f749e28bc0fda130121.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 9ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 153.139.136.16 at 2021-06-19 12:31:44 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/public/homes/top.html.erb:19
+  Rendered public/homes/top.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 63ms (Views: 62.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admins/sign_in" for 153.139.136.16 at 2021-06-19 12:31:51 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in" for 153.139.136.16 at 2021-06-19 12:31:59 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LkqXWhO4ab40sTF1HWj2HsWYtNrlKrmvYF9FyfzJsjGrDr9T5taam/ylIAhG4ImyfsxIQZE23lY5qAJsU6I1BQ==", "admin"=>{"email"=>"admin@icloud.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@icloud.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://aeda2ff083be4f749e28bc0fda130121.vfs.cloud9.us-east-2.amazonaws.com/admin/requests
+Completed 302 Found in 307ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/requests" for 153.139.136.16 at 2021-06-19 12:31:59 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/application
+  Rendered admin/requests/index.html.erb within layouts/application (0.6ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 65ms (Views: 64.1ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mRequest Load (1.5ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+Started GET "/admin/requests" for 153.139.136.16 at 2021-06-19 12:36:33 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/application
+  [1m[36mRequest Load (0.1ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/admin/requests/index.html.erb:5
+  [1m[36mRequestProject Load (0.2ms)[0m  [1m[34mSELECT  "request_projects".* FROM "request_projects" WHERE "request_projects"."request_id" IN (SELECT "requests"."id" FROM "requests") LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE RequestProject Load (0.0ms)[0m  [1m[34mSELECT  "request_projects".* FROM "request_projects" WHERE "request_projects"."request_id" IN (SELECT "requests"."id" FROM "requests") LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE RequestProject Load (0.0ms)[0m  [1m[34mSELECT  "request_projects".* FROM "request_projects" WHERE "request_projects"."request_id" IN (SELECT "requests"."id" FROM "requests") LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE RequestProject Load (0.0ms)[0m  [1m[34mSELECT  "request_projects".* FROM "request_projects" WHERE "request_projects"."request_id" IN (SELECT "requests"."id" FROM "requests") LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE RequestProject Load (0.0ms)[0m  [1m[34mSELECT  "request_projects".* FROM "request_projects" WHERE "request_projects"."request_id" IN (SELECT "requests"."id" FROM "requests") LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE RequestProject Load (0.0ms)[0m  [1m[34mSELECT  "request_projects".* FROM "request_projects" WHERE "request_projects"."request_id" IN (SELECT "requests"."id" FROM "requests") LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE RequestProject Load (0.0ms)[0m  [1m[34mSELECT  "request_projects".* FROM "request_projects" WHERE "request_projects"."request_id" IN (SELECT "requests"."id" FROM "requests") LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE RequestProject Load (0.0ms)[0m  [1m[34mSELECT  "request_projects".* FROM "request_projects" WHERE "request_projects"."request_id" IN (SELECT "requests"."id" FROM "requests") LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  Rendered admin/requests/index.html.erb within layouts/application (518.9ms)
+Completed 500 Internal Server Error in 522ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `order' for #<#<Class:0x00007fd6f8675968>:0x00007fd6ee971d60>):
+    16:           <% @requests.each do |request| %>
+    17:             <tr>
+    18:               <td><%= request.created_at.strftime('%Y/%m/%d') %></td>
+    19:               <td class="text-left"><%= link_to request.name, admin_request_path(order) %></td>
+    20:               <td class="text-left"><%= request.request_projects.sum(:quantity) %></td>
+    21:               <td class="text-left"><%= request.status %></td>
+    22:             </tr>
+  
+app/views/admin/requests/index.html.erb:19:in `block in _app_views_admin_requests_index_html_erb__3684988121126089670_70280551306080'
+app/views/admin/requests/index.html.erb:16:in `_app_views_admin_requests_index_html_erb__3684988121126089670_70280551306080'
+Started GET "/admin/requests" for 153.139.136.16 at 2021-06-19 12:37:58 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/application
+  [1m[36mRequest Load (0.1ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/admin/requests/index.html.erb:5
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 1]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  Rendered admin/requests/index.html.erb within layouts/application (8.8ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `status' for #<Request:0x00007fd6f8778838>
+Did you mean?  status_i18n):
+    18:               <td><%= request.created_at.strftime('%Y/%m/%d') %></td>
+    19:               <td class="text-left"><%= link_to request.name, admin_request_path(request) %></td>
+    20:               <td class="text-left"><%= request.request_projects.sum(:quantity) %></td>
+    21:               <td class="text-left"><%= request.status %></td>
+    22:             </tr>
+    23:           <% end %>
+    24:         </tbody>
+  
+app/views/admin/requests/index.html.erb:21:in `block in _app_views_admin_requests_index_html_erb__3684988121126089670_70280634109980'
+app/views/admin/requests/index.html.erb:16:in `_app_views_admin_requests_index_html_erb__3684988121126089670_70280634109980'
+Started GET "/admin/requests" for 153.139.136.16 at 2021-06-19 12:39:00 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/application
+  [1m[36mRequest Load (0.1ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/admin/requests/index.html.erb:5
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 1]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 2]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 3]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 4]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 5]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 6]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 7]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  Rendered admin/requests/index.html.erb within layouts/application (13.6ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 80ms (Views: 78.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/requests/1" for 153.139.136.16 at 2021-06-19 12:39:13 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::RequestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRequest Load (0.2ms)[0m  [1m[34mSELECT  "requests".* FROM "requests" WHERE "requests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/requests_controller.rb:8
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+NameError (uninitialized constant Admin::RequestsController::Requestproject):
+  
+app/controllers/admin/requests_controller.rb:9:in `show'
+Started GET "/admin/requests" for 153.139.136.16 at 2021-06-19 12:39:15 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/application
+  [1m[36mRequest Load (0.1ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/admin/requests/index.html.erb:5
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 1]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 2]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 3]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 4]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 5]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 6]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 7]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  Rendered admin/requests/index.html.erb within layouts/application (11.5ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 76ms (Views: 74.5ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/admins/sign_out" for 153.139.136.16 at 2021-06-19 12:40:21 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ncjmRVja6eeTq23tdW506Fdk5vELcC7TcKMfiMZ/X87iL+LCT9ZoahR/jSCE+8R6uqtBmrZI2NQKW69FcEH2Nw=="}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://aeda2ff083be4f749e28bc0fda130121.vfs.cloud9.us-east-2.amazonaws.com/admins/sign_in
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admins/sign_in" for 153.139.136.16 at 2021-06-19 12:40:21 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 65ms (Views: 64.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 153.139.136.16 at 2021-06-19 12:40:23 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/public/homes/top.html.erb:19
+  Rendered public/homes/top.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 64ms (Views: 63.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/members/sign_in" for 153.139.136.16 at 2021-06-19 12:40:25 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Members::SessionsController#new as HTML
+  Rendering members/sessions/new.html.erb within layouts/application
+  Rendered members/shared/_links.html.erb (0.8ms)
+  Rendered members/sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 67ms (Views: 66.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/members/sign_in" for 153.139.136.16 at 2021-06-19 12:40:31 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Members::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W37rHWHufXid8XxLZcDQXy745Dl1YYRI1XmCPoecrKCIqSHWFxrIJB0eIcbQun1XVWPP0YtoGH2J30v2ayRs9g==", "member"=>{"email"=>"aa@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."email" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["email", "aa@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://aeda2ff083be4f749e28bc0fda130121.vfs.cloud9.us-east-2.amazonaws.com/public/members/1
+Completed 302 Found in 306ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/public/members/1" for 153.139.136.16 at 2021-06-19 12:40:32 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MembersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/members_controller.rb:4
+  Rendering public/members/show.html.erb within layouts/application
+  Rendered public/members/show.html.erb within layouts/application (0.9ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 77ms (Views: 74.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/public/members/1" for 153.139.136.16 at 2021-06-19 12:40:41 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MembersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/members_controller.rb:4
+  Rendering public/members/show.html.erb within layouts/application
+  Rendered public/members/show.html.erb within layouts/application (0.9ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 65ms (Views: 63.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/public/requests" for 153.139.136.16 at 2021-06-19 12:40:42 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RequestsController#index as HTML
+  Rendering public/requests/index.html.erb within layouts/application
+  [1m[36mRequest Load (0.1ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/public/requests/index.html.erb:17
+  [1m[36mRequestProject Load (0.1ms)[0m  [1m[34mSELECT "request_projects".* FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 1]]
+  ↳ app/views/public/requests/index.html.erb:24
+  [1m[36mRequestProject Load (0.1ms)[0m  [1m[34mSELECT "request_projects".* FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 2]]
+  ↳ app/views/public/requests/index.html.erb:24
+  [1m[36mRequestProject Load (0.1ms)[0m  [1m[34mSELECT "request_projects".* FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 3]]
+  ↳ app/views/public/requests/index.html.erb:24
+  [1m[36mRequestProject Load (0.1ms)[0m  [1m[34mSELECT "request_projects".* FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 4]]
+  ↳ app/views/public/requests/index.html.erb:24
+  [1m[36mRequestProject Load (0.1ms)[0m  [1m[34mSELECT "request_projects".* FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 5]]
+  ↳ app/views/public/requests/index.html.erb:24
+  [1m[36mRequestProject Load (0.1ms)[0m  [1m[34mSELECT "request_projects".* FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 6]]
+  ↳ app/views/public/requests/index.html.erb:24
+  [1m[36mRequestProject Load (0.1ms)[0m  [1m[34mSELECT "request_projects".* FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 7]]
+  ↳ app/views/public/requests/index.html.erb:24
+  Rendered public/requests/index.html.erb within layouts/application (11.4ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 88ms (Views: 86.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/public/projects" for 153.139.136.16 at 2021-06-19 12:40:48 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ProjectsController#index as HTML
+  Rendering public/projects/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."is_active" = ?[0m  [["is_active", 1]]
+  ↳ app/views/public/projects/index.html.erb:4
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."is_active" = ? LIMIT ? OFFSET ?[0m  [["is_active", 1], ["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/public/projects/index.html.erb:7
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/projects/_product_individual.html.erb:2
+  Rendered public/projects/_product_individual.html.erb (2.5ms)
+  Rendered public/projects/index.html.erb within layouts/application (9.4ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 74ms (Views: 72.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/public/cart_projects" for 153.139.136.16 at 2021-06-19 12:40:50 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CartProjectsController#index as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCartProject Load (0.1ms)[0m  [1m[34mSELECT "cart_projects".* FROM "cart_projects"[0m
+  ↳ app/controllers/public/cart_projects_controller.rb:5
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/cart_projects_controller.rb:5
+  Rendering public/cart_projects/index.html.erb within layouts/application
+  [1m[36mCartProject Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "cart_projects" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/public/cart_projects/index.html.erb:4
+  Rendered public/cart_projects/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 79ms (Views: 73.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/public/requests/new" for 153.139.136.16 at 2021-06-19 12:40:57 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RequestsController#new as HTML
+  Rendering public/requests/new.html.erb within layouts/application
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/requests/new.html.erb:33
+  Rendered public/requests/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 70ms (Views: 68.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/public/members/request_confirm" for 153.139.136.16 at 2021-06-19 12:40:59 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RequestsController#request_confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IwVEtyYLtPS4707ZBlixNk3EnJhFV+pNjYa5qfyN9NCaLSu570CQnGwWDKI7YVMxW8cyV8Qgoeka5eyZfgsk4Q==", "request"=>{"pay_type"=>"クレジットカード", "entrys_option"=>"1", "telephone_number"=>"", "name"=>""}, "commit"=>"確認画面に進む"}
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/requests_controller.rb:17
+  [1m[36mCartProject Load (0.1ms)[0m  [1m[34mSELECT "cart_projects".* FROM "cart_projects" WHERE "cart_projects"."member_id" = ?[0m  [["member_id", 1]]
+  ↳ app/controllers/public/requests_controller.rb:20
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/requests_controller.rb:21
+  Rendering public/requests/request_confirm.html.erb within layouts/application
+  Rendered public/requests/request_confirm.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 81ms (Views: 75.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/public/members/1" for 153.139.136.16 at 2021-06-19 12:41:05 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MembersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/members_controller.rb:4
+  Rendering public/members/show.html.erb within layouts/application
+  Rendered public/members/show.html.erb within layouts/application (0.9ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 77ms (Views: 75.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/members/sign_out" for 153.139.136.16 at 2021-06-19 12:41:07 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Members::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Us8wCHk8jfR5BLqiW3BaY9jxEQFF2Gqt7bx3DVSLVg0oZ+1lOZSFsujldKB6mLMaqJ0BrG6k58BoUgRPeGP4Cw=="}
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://aeda2ff083be4f749e28bc0fda130121.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 153.139.136.16 at 2021-06-19 12:41:07 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/public/homes/top.html.erb:19
+  Rendered public/homes/top.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 76ms (Views: 74.9ms | ActiveRecord: 0.1ms)
+
+
