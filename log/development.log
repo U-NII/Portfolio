@@ -10903,3 +10903,212 @@ Processing by Public::HomesController#top as HTML
 Completed 200 OK in 76ms (Views: 74.9ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/" for 153.139.136.16 at 2021-06-20 12:21:02 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/public/homes/top.html.erb:19
+  Rendered public/homes/top.html.erb within layouts/application (136.3ms)
+Completed 200 OK in 770ms (Views: 748.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 153.139.136.16 at 2021-06-20 12:21:04 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/public/homes/top.html.erb:19
+  Rendered public/homes/top.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 114ms (Views: 113.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/attachments/eb8e91f5ead9119272cbf8e5b44896626d1f712a/store/fill/200/150/5079f175174ffead0c01cad80c1824d5671bb528c12b1edb1bf2792c5430/image" for 153.139.136.16 at 2021-06-20 12:21:06 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-06-20 12:21:06 +0000] GET "/eb8e91f5ead9119272cbf8e5b44896626d1f712a/store/fill/200/150/5079f175174ffead0c01cad80c1824d5671bb528c12b1edb1bf2792c5430/image" 200 201.8ms
+
+Started GET "/admins/sign_in" for 153.139.136.16 at 2021-06-20 12:21:17 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 172ms (Views: 155.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admins/sign_in" for 153.139.136.16 at 2021-06-20 12:21:23 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i9mZcHHf3OSTRbF0EZfgy6utR44pfR6akciPhgzZeCbfN2ZaEJjk7zje4UBMDSlZ1PTgyN1XKYxQHwqWGsyS5g==", "admin"=>{"email"=>"admin@icloud.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@icloud.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://aeda2ff083be4f749e28bc0fda130121.vfs.cloud9.us-east-2.amazonaws.com/admin/requests
+Completed 302 Found in 322ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/requests" for 153.139.136.16 at 2021-06-20 12:21:23 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/application
+  [1m[36mRequest Load (0.1ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/admin/requests/index.html.erb:5
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 1]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 2]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 3]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 4]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 5]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 6]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 7]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  Rendered admin/requests/index.html.erb within layouts/application (37.5ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 150ms (Views: 139.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/requests" for 153.139.136.16 at 2021-06-20 12:31:51 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/application
+  [1m[36mRequest Load (0.1ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/admin/requests/index.html.erb:5
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 1]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  Rendered admin/requests/index.html.erb within layouts/application (14.2ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `buy_stat' for #<Request:0x00007f26bc5d60a8>
+Did you mean?  buy_status):
+    18:               <td><%= request.created_at.strftime('%Y/%m/%d') %></td>
+    19:               <td class="text-left"><%= link_to request.name, admin_request_path(request) %></td>
+    20:               <td class="text-left"><%= request.request_projects.sum(:quantity) %></td>
+    21:               <% if request.buy_stat == 0 %>
+    22:                 <td class="text-left">０の時</td>
+    23:               <% elsif request.buy_status == 1 %>
+    24:                 <td class="text-left">１の時時</td>
+  
+app/views/admin/requests/index.html.erb:21:in `block in _app_views_admin_requests_index_html_erb__163611814358821220_69902172791840'
+app/views/admin/requests/index.html.erb:16:in `_app_views_admin_requests_index_html_erb__163611814358821220_69902172791840'
+Started GET "/admin/requests" for 153.139.136.16 at 2021-06-20 12:32:10 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/application
+  [1m[36mRequest Load (0.2ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/admin/requests/index.html.erb:5
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 1]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 2]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 3]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 4]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 5]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 6]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 7]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  Rendered admin/requests/index.html.erb within layouts/application (18.8ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 133ms (Views: 130.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/requests" for 153.139.136.16 at 2021-06-20 12:32:31 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/application
+  [1m[36mRequest Load (0.1ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/admin/requests/index.html.erb:5
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 1]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 2]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 3]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 4]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 5]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 6]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 7]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  Rendered admin/requests/index.html.erb within layouts/application (17.1ms)
+  [1m[36mAdmin Load (7.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 120ms (Views: 110.9ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/admin/requests" for 153.139.136.16 at 2021-06-20 12:33:35 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/application
+  Rendered admin/requests/index.html.erb within layouts/application (0.6ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 97ms (Views: 95.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/requests" for 153.139.136.16 at 2021-06-20 12:34:44 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/application
+  [1m[36mRequest Load (0.1ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/admin/requests/index.html.erb:16
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 1]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 2]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 3]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 4]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 5]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 6]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 7]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  Rendered admin/requests/index.html.erb within layouts/application (16.5ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 119ms (Views: 117.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/requests" for 153.139.136.16 at 2021-06-20 12:59:10 +0000
+Cannot render console from 153.139.136.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/application
+  [1m[36mRequest Load (0.2ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/admin/requests/index.html.erb:5
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 1]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 2]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 3]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 4]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 5]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 6]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("request_projects"."quantity") FROM "request_projects" WHERE "request_projects"."request_id" = ?[0m  [["request_id", 7]]
+  ↳ app/views/admin/requests/index.html.erb:20
+  Rendered admin/requests/index.html.erb within layouts/application (18.4ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 153ms (Views: 149.9ms | ActiveRecord: 0.9ms)
+
+
