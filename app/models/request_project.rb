@@ -5,5 +5,5 @@ class RequestProject < ApplicationRecord
   validates :project_id, :request_id, :quantity, :price, presence: true
   validates :price, :quantity, numericality: { only_integer: true }
 
-  enum production_status: {"着手不可": 0,"制作待ち": 1,"製作中": 2,"制作完了": 3 }
+  enum make_status: {"参加不可": 0,"申請待ち": 1,"確認中": 2,"申請完了": 3 }
 end
