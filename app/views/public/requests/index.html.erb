@@ -22,7 +22,7 @@
             </td>
             <td>
               <% request.request_projects.each do |request_project| %>
-              <%= order_project.project.name %></ br>
+                <%= request_project.project.name %></ br>
               <% end %>
             </td>
             <td><%= request.total_price %>円</td>

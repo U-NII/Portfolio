@@ -71,9 +71,19 @@ class Public::RequestsController < ApplicationController
     @request.total_price = @request.total_price
     @request.shipping_cost = 500
     @request.save
-
-
     #request_projects_maker(@request)
+    # カート商品の情報を注文商品に移動
+    @cart_projects = current_member.cart_projects
+    @cart_projects.each do |cart_project|
+      @request_project = RequestProject.new
+      @request_project.project_id = cart_project.project_id
+      @request_project.request_id = @request.id
+      @request_project.quantity = cart_project.quantity
+      @request_project.price = cart_project.project.price
+      @request_project.make_status = 0
+      @request_project.save
+    end
+    @cart_projects.destroy_all
 
     redirect_to public_complete_path
   end

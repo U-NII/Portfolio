@@ -43,7 +43,7 @@
         </table>
       </div>
     </div>
-      
+
     <div class="row">
       <div class="col-md-8">
         <h5>注文内容</h5>
@@ -60,14 +60,14 @@
           <tbody>
             <tr>
               <td><%= request_project.request.name %></td>
-              <td>¥<%= request_project.tax_included_price.to_s(:delimited) %></td>
+              <td><%= ((request_project.price * 1.1).floor).to_s(:delimited) %></td>
               <td><%= request_project.quantity %></td>
-              <td>¥<%= request_project.subtotal.to_s(:delimited) %></td>
+              <td>¥<%= ((request_project.price * request_project.quantity * 1.1).floor).to_s(:delimited) %></td>
             </tr>
           </tbody>
           <% end %>
         </table>
       </div>
-      
+
     </div>
   </div>
