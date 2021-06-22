@@ -33,6 +33,7 @@ end
     resources :members
     resources :projects
     resources :requests
+    resources :receiveds
   end
 
 end

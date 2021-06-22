@@ -1,7 +1,7 @@
 class Public::ProjectsController < ApplicationController
 	def index
-      @genres = Genre.all
-      @projects = Project.where(is_active: true).#where('expired_at < ?', Time.current).page(params[:page]).per(8)
+    @genres = Genre.all      
+    @projects = Project.where(is_active: true).where('expired_at >= ?', Date.current).page(params[:page]).per(8)
 	end
 
 	def show

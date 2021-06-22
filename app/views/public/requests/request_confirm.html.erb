@@ -68,7 +68,7 @@
                   <th>参加名</th><td><%= @request.name %></td>
               </tr>
               <tr>
-                <th>電話番号</th><td><%= current_member.telephone_number %></td>
+                <th>電話番号</th><td><%= @request.telephone_number %></td>
               </tr>
           </thead>
       </table>
@@ -78,7 +78,7 @@
       <div class="mx-auto">
         <%= form_with model: @request, url: public_requests_path, local: true do |f| %>
           <%= f.hidden_field :pay_type, :value => @request.pay_type %>
-          <%= f.hidden_field :telephone_number, :value => current_member.telephone_number %>
+          <%= f.hidden_field :telephone_number, :value => @request.telephone_number %>
           <%= f.hidden_field :name, :value => @request.name %>
           <%= f.hidden_field :total_price, :value => @request.total_price %>
           <%= f.submit '注文を確定する', class:"btn btn-success" %>

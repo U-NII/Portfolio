@@ -19,6 +19,10 @@
         <td><%= @project.price.to_s(:delimited) %>円</td>
       </tr>
       <tr class="text-center">
+        <td>募集期限</td>
+        <td><%= @project.expired_at %></td>
+      </tr>
+      <tr class="text-center">
         <td>販売ステータス</td>
         <td>
           <% if @project.is_active == true %>
@@ -31,6 +35,7 @@
     </table>
     <div class="col text-left">
       <%= link_to "編集する", edit_admin_project_path(@project), data: {"turbolinks" => false}, class: "btn btn-success" %>
+      <%= link_to "削除", admin_project_path(@project), method: :delete, data: {confirm: "本当に削除してもよろしいですか？"}, local: true, class: "btn btn-danger" %>
     </div>
    </div>
   </div>

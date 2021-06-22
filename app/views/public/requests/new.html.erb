@@ -21,7 +21,7 @@
 
                     <div class="row">
                         <div class="col-md-10">
-                            <label>お届け先</label>
+                            <label>登録情報</label>
                         </div>
                     </div>
 
@@ -30,26 +30,26 @@
                             <%= f.radio_button :entrys_option, 1, checked: "checked" %>
                             <%= f.label :"ご自身の情報" %><br>
                             <div class="col-lg-3 ml-2">
-                                <%= current_member.telephone_number %>
                                 <%= current_member.last_name %><%= current_member.first_name %>
+                                <%= current_member.telephone_number %>
                             </div><br>
                             <%= f.radio_button :entrys_option, 2 %>
                             <%= f.label :"登録情報からの選択"%><br>
                             <div class="col-lg-3 ml-2">
-                                <%#= f.collection_select :address_id, @addresses, :id, :reg_address %>
+                                <%= f.collection_select :address_id, @addresses, :id, :request_address %>
                             </div><br>
-                            <%= f.radio_button :s_option, 3 %>
+                            <%= f.radio_button :entrys_option, 3 %>
                             <%= f.label :"新しい参加名"%>
                             <div class="col-12 ml-2">
                                 <table class="table table-borderless">
                                     <tbody>
                                         <tr>
-                                            <th>電話番号(ハイフンなし)</th>
-                                            <td> <%= f.text_field :telephone_number, placeholder: "0000000" %></td>
+                                            <th>参加名</th>
+                                            <td><%= f.text_field :name, placeholder: "寿限無" %></td>
                                         </tr>
                                         <tr>
-                                            <th>参加名</th>
-                                            <td><%= f.text_field :name, placeholder: "令和道⼦" %></td>
+                                            <th>電話番号(ハイフンなし)</th>
+                                            <td><%= f.text_field :telephone_number, placeholder: "0000000" %></td>
                                         </tr>
                                     </tbody>
                                 </table>

@@ -11,6 +11,8 @@
           <h3>¥ <%= (@project.price * 1.1).floor.to_s(:delimited) %>
             <span>(税込)</span>
           </h3><br>
+          <h3>募集期限</h3>
+          <h5><%= @project.expired_at %></h5>
           <% if @project.is_active == true %>
             <% if @project.genre.is_valid == true %>
               <%= form_with model:@cart_project , url: public_cart_projects_path, method: :post, local:true do |f| %>
