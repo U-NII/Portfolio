@@ -1,0 +1,36 @@
+  <p id="notice">
+    <%= notice %>
+  </p>
+  <div class="center-block container">
+    <div class="row">
+      <div  class="col-md-10 col-md-offset-1">
+        <h2 class="head-line text-center">配送先登録/一覧</h2>
+        <%= form_with(model: @received, :url => {:controller => "public/receiveds"}, local: true) do |f| %>
+          <table class="col-12">
+            <tr>
+              <td>
+              <%= f.label :"電話番号" ,class: "col-xs-3" %>
+              </td>
+              <td>
+              <%= f.text_field :telephone_number, class: "col-12" %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <%= f.label :"参加名" ,class: "col-xs-3" %>
+              </td>
+              <td>
+              <%= f.text_field :name, class: "col-8" %>
+              </td>
+              <td>
+              <%= f.submit '登録する' ,class: "mx-md-5 btn btn-success" %>
+              </td>
+            </tr>
+          </table>
+        <% end %>
+        <div class="my-md-5">
+          <%= render "receiveds_index", receiveds: @receiveds %>
+        </div>
+      </div>
+    </div>
+  </div>

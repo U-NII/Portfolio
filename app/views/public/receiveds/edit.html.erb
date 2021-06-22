@@ -1,0 +1,38 @@
+<div class="center-block container">
+  <div calss="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2 class="head-line text-center">配送先編集</h2>
+      <% if @received.errors.any? %>
+        <%= @received.errors.count %>件のエラーが発生しています。正しく情報を入力してください!
+      <% end %>
+      <%= form_with(model: @received, url:public_received_path, local: true ,method: :patch) do |f| %>
+        <table class="col-12 table">
+          <tbody>
+            <tr>
+              <td>
+              <%= f.label :"電話番号" ,class: "col-xs-3" %>
+              </td>
+              <td>
+              <%= f.text_field :telephone_number ,class: "col-12" %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <%= f.label :"参加名" ,class: "col-xs-3" %>
+              </td>
+              <td>
+              <%= f.text_field :name ,class: "col-8" %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <%= f.submit '編集する' ,class: "col-xs-2 btn btn-primary btn-lg" %>
+              <%= link_to "配送先登録/一覧へ戻る", public_receiveds_path, class: "btn btn-info" %>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      <% end %>
+    </div>
+  </div>
+</div>

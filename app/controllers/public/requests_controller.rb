@@ -1,11 +1,13 @@
 class Public::RequestsController < ApplicationController
+  before_action :check_name_and_tel_phone, only: [:request_confirm]
+
   def index
     @requests = Request.all
   end
 
   def new
     @request = Request.new
-    #@addresses = current_member.addresses
+    @addresses = current_member.receiveds
   end
 
   def show
@@ -28,41 +30,19 @@ class Public::RequestsController < ApplicationController
     @request.shipping_cost = 500
     @request.total_price = @sub_total + @request.shipping_cost
     @request.pay_type = params[:request][:pay_type]
+    @request.telephone_number = params[:request][:pay_type]
 
-
-    #@request_address = params[:request][:address_option]
-
-    #if @request_address == "1"
-
-     #@request.postcode = current_member.postcode
-     #@order.address = current_customer.address
-     #@order.name = current_customer.last_name + current_customer.first_name
-
-    #elsif @order_address == "2"
-
-     #@address = Address.find(params[:order][:address_id])
-     #@order.postcode =  @address.postcode
-     #@order.address =  @address.address
-     # @order.name = @address.name
-
-    #elsif @order_address == "3"
-
-     #@order.postcode = params[:order][:postcode]
-     #@order.address = params[:order][:address]
-     #@order.name = params[:order][:name]
-
-    #カスタマーの住所登録と入力内容の確認
-     #@address = current_customer.addresses.new
-     #@address.postcode = params[:order][:postcode]
-     #@address.address = params[:order][:address]
-     #@address.name = params[:order][:name]
-      #if @address.save
-        #flash[:notice] = "新しい住所が登録されました"
-      #else
-        #flash[:alert] = "正しい住所を入力してください"
-        #redirect_back(fallback_location: root_path)
-      #end
-    #end
+   if params[:request][:entrys_option] == "1"
+    @request.telephone_number = current_member.telephone_number
+    @request.name = current_member.last_name + current_member.first_name
+   elsif params[:request][:entrys_option] == "2"
+    received = Received.find(params[:request][:address_id])
+    @request.telephone_number = received.telephone_number
+    @request.name = received.name
+   elsif params[:request][:entrys_option] == "3"
+    @request.telephone_number = params[:request][:telephone_number]
+    @request.name = params[:request][:name]
+   end
   end
 
   def create
@@ -70,7 +50,14 @@ class Public::RequestsController < ApplicationController
     @request.member_id = current_member.id
     @request.total_price = @request.total_price
     @request.shipping_cost = 500
-    @request.save
+  unless @request.save
+    @receiveds = Received.where(member: current_member)
+    render :new
+  else
+    if params[:request][:received] == "1"
+      current_member.address.new(request_params)
+    end
+
     #request_projects_maker(@request)
     # カート商品の情報を注文商品に移動
     @cart_projects = current_member.cart_projects
@@ -83,9 +70,11 @@ class Public::RequestsController < ApplicationController
       @request_project.make_status = 0
       @request_project.save
     end
+    @received = Received.new(member: current_member, name: @request.name, telephone_number: @request.telephone_number)
+    @received.save!
     @cart_projects.destroy_all
-
     redirect_to public_complete_path
+  end
   end
 
   def complete
@@ -116,4 +105,10 @@ class Public::RequestsController < ApplicationController
     params.require(:request).permit(:pay_type, :name, :total_price, :telephone_number )
   end
 
+  def check_name_and_tel_phone
+    if !params[:name] || !params[:telephone_number]
+      #@request.errors.add(:name, "name must exist")
+      render :new and return
+    end
+  end
 end

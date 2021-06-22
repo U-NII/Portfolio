@@ -21,6 +21,10 @@
         <td><%= f.text_field :price, placeholder: "金額を入力してください。" %>円</td>
       </tr>
       <tr>
+        <td><%= f.label :"募集期限" %></td>
+        <td><%= f.date_field :expired_at, placeholder: "日付を入力してください。" %></td>
+      </tr>
+      <tr>
         <td><%= f.label :"販売ステータス" %></td>
         <td><%= f.radio_button :is_active, :true %><%= f.label :is_active, "販売中", {value: :true, style: "display: inline-block;"} %>
           <%= f.radio_button :is_active, :false %><%= f.label :is_active, "販売停止", {value: :false, style: "display: inline-block;"} %>

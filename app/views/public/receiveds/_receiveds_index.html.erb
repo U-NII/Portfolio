@@ -1,0 +1,36 @@
+  <div class="container">
+    <div class="row">
+      <table class="table table-hover table-bordered">
+        <div "col-md-10">
+          <thead>
+            <tr>
+              <th>参加名</th>
+              <th>電話番号</th>
+              <th colspan="2"></th>
+            </tr>
+          </thead>
+        </div>
+        <tbody>
+          <% if @received.errors.any? %>
+            <%= @received.errors.count %>件のエラーが発生しています。正しく情報を入力してください!
+          <% end %>
+          <% receiveds.each do |received| %>
+            <tr class="shipping-tr" id="destroy-">
+              <td>
+                <%= received.telephone_number %>
+              </td>
+              <td class="text-left">
+                <%= received.name %>
+              </td>
+              <td>
+                <%= link_to "編集する",edit_public_received_path(received), class: "glyphicon glyphicon-pencil btn-sm btn-primary" %>
+              </td>
+              <td>
+                <%= link_to "削除する",public_received_path(received), method: :delete, data: {confirm: "本当に削除してもよろしいですか？"}, local: true, class: "glyphicon glyphicon-trash btn-sm btn-danger " %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
