@@ -106,9 +106,23 @@ class Public::RequestsController < ApplicationController
   end
 
   def check_name_and_tel_phone
-    if !params[:name] || !params[:telephone_number]
-      #@request.errors.add(:name, "name must exist")
-      render :new and return
+    if params[:request][:entrys_option] == 3
+      if params[:request][:name].empty? || params[:request][:telephone_number].empty?
+        @request = Request.new({id: nil,
+                        member_id: nil,
+                    shipping_cost: nil,
+                         pay_type: params[:request][:pay_type],
+                      total_price: nil, name: params[:request][:name],
+                       buy_status: "入金待ち",
+                 telephone_number: params[:request][:telephone_number],
+                       created_at: nil, updated_at: nil,
+                    entrys_option: params[:request][:entrys_option]
+        })
+        @addresses = current_member.receiveds
+        #@request.errors.add(:name, "name must exist")
+        #redirect_to new_public_request_path
+        render :new
+      end
     end
   end
 end

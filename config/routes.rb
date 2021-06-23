@@ -23,6 +23,7 @@ end
 
  namespace :public do
     put "/members/:id/hide" => "members#hide", as: 'members_hide'
+    get '/search', to: 'searchs#search'
     get "/members/:id/withdrawal" => "members#withdrawal", as: 'members_withdrawal'
     post "/members/request_confirm" => "requests#request_confirm", as: 'request_confirm'
     get  "/members/complete" => "requests#complete", as: 'complete'
@@ -34,6 +35,8 @@ end
     resources :projects
     resources :requests
     resources :receiveds
+    resources :events
+    root "events#index"
   end
 
 end
