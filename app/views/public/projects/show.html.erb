@@ -7,12 +7,13 @@
         <div class="col-4 offset-1 product_show pt-2 pb-2">
           <h2><%= @project.name %></h2><br>
           <h4><%= @project.description %></h4><br>
-          <h3>¥ <%= tax_price(@project.price).to_s(:delimited) %>
           <h3>¥ <%= (@project.price * 1.1).floor.to_s(:delimited) %>
             <span>(税込)</span>
           </h3><br>
+          <h3>参加定員</h3>
+          <h5><%= @project.count_limid %>人</h5><br>
           <h3>募集期限</h3>
-          <h5><%= @project.expired_at %></h5>
+          <h5><%= @project.end_time %></h5>
           <% if @project.is_active == true %>
             <% if @project.genre.is_valid == true %>
               <%= form_with model:@cart_project , url: public_cart_projects_path, method: :post, local:true do |f| %>

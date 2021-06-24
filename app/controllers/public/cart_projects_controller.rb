@@ -10,14 +10,6 @@ class Public::CartProjectsController < ApplicationController
     @project = Project.find(params[:cart_project][:project_id])
     @cart_project = CartProject.new(cart_project_params)
     @cart_project.member_id = current_member.id
-    @cart_projects = current_member.cart_projects.all
-    @cart_projects.each do |cart_project|
-    if cart_project.project_id == @cart_project.project_id
-      new_quantity = cart_project.quantity + @cart_project.quantity
-      cart_project.update_attribute(:quantity, new_quantity)
-      @cart_project.delete
-    end
-  end
     if @cart_project.save
       redirect_to public_cart_projects_path
     else
