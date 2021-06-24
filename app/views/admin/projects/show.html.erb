@@ -19,8 +19,16 @@
         <td><%= @project.price.to_s(:delimited) %>円</td>
       </tr>
       <tr class="text-center">
-        <td>募集期限</td>
+        <td>参加定員</td>
+        <td><%= @project.count_limid %>人</td>
+      </tr>
+      <tr class="text-center">
+        <td>開催日時</td>
         <td><%= @project.expired_at %></td>
+      </tr>
+      <tr class="text-center">
+        <td>募集期限</td>
+        <td><%= @project.end_time %></td>
       </tr>
       <tr class="text-center">
         <td>販売ステータス</td>

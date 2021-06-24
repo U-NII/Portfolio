@@ -17,12 +17,20 @@
         <td><%= f.collection_select(:genre_id, @genres, :id, :name, prompt: "-- ジャンルを選択してください --") %></td>
       </tr>
       <tr>
-        <td><%= f.label :"税抜価格" %></td>
+        <td><%= f.label :"参加費用(税抜価格)" %></td>
         <td><%= f.text_field :price, placeholder: "金額を入力してください。" %>円</td>
       </tr>
       <tr>
+        <td><%= f.label :"参加定員" %></td>
+        <td><%= f.text_field :count_limid, placeholder: "参加定員を入力してください。" %>人</td>
+      </tr>
+      <tr>
+        <td><%= f.label :"開催日時" %></td>
+        <td><%= f.date_field :expired_at %></td>
+      </tr>
+      <tr>
         <td><%= f.label :"募集期限" %></td>
-        <td><%= f.date_field :expired_at, placeholder: "日付を入力してください。" %></td>
+        <td><%= f.date_field :end_time %></td>
       </tr>
       <tr>
         <td><%= f.label :"販売ステータス" %></td>

@@ -68,7 +68,21 @@ class Public::RequestsController < ApplicationController
       @request_project.quantity = cart_project.quantity
       @request_project.price = cart_project.project.price
       @request_project.make_status = 0
-      @request_project.save
+      if @request_project.save
+        requests = Request.all
+        total_quantity = 0
+        requests.each do |request|
+          limid = RequestProject.find_by(request_id: request.id, project_id: cart_project.project_id)
+          if limid != nil
+            total_quantity += limid.quantity
+          end
+        end
+        project = Project.find(cart_project.project_id)
+        if total_quantity >= project.count_limid
+          project.is_active = false
+          project.save
+        end
+      end
     end
     @received = Received.new(member: current_member, name: @request.name, telephone_number: @request.telephone_number)
     @received.save!

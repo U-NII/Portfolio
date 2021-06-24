@@ -53,7 +53,7 @@ class Admin::ProjectsController < ApplicationController
 
   def project_params
     params.require(:project).permit(:name, :image, :description,
-       :genre_id, :price, :is_active, :expired_at)
+       :genre_id, :price, :is_active, :expired_at, :end_time, :count_limid)
   end
 
   def set_genres
