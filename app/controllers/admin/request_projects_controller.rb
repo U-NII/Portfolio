@@ -1,7 +1,7 @@
 class Admin::RequestProjectsController < ApplicationController
   def update
     @request_projects = RequestProject.find(params[:id])
-    @request = @request_projects.order
+    @request = @request_projects.request
     if @request_projects.update(request_project_params)
       redirect_to admin_request_path(@request), notice:"制作ステータスを変更しました。"
     else
@@ -11,6 +11,6 @@ class Admin::RequestProjectsController < ApplicationController
 
   private
   def request_project_params
-    params.require(:request_projects).permit(:make_status)
+    params.require(:request_project).permit(:project_status)
   end
 end

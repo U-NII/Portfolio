@@ -40,11 +40,20 @@ class Admin::ProjectsController < ApplicationController
     end
   end
 
+  def destroy
+    @project = Project.find(params[:id])
+    if @project.destroy
+      redirect_to admin_projects_path
+    else
+      render :edit
+    end
+  end
+
   private
 
   def project_params
     params.require(:project).permit(:name, :image, :description,
-       :genre_id, :price, :is_active)
+       :genre_id, :price, :is_active, :expired_at, :end_time, :count_limid)
   end
 
   def set_genres

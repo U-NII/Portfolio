@@ -1,36 +1,49 @@
-  <div class="shiba-background">
-    <div class="container">
-      <div class="row">
-        <h2 class="col-2 align-self-start text-center text-white bg-secondary mt-4">商品詳細</h2>
-        <div class="col-12 row align-items-center">
-          <div class="product_show col-7 offset-1 text-white">
-            <p>
-              商品名：<%= @project.name %>
-            </p>
-            <p>
-              商品説明：<%= @project.description %>
-            </p>
-            <p>
-              ジャンル：<%= @project.genre.name %>
-            </p>
-            <p>
-              税込価格：<%= @project.price.to_s(:delimited) %>
-              (<%= @project.price.to_s(:delimited) %>) 円<br>
-              (税抜価格)
-            </p>
-            <p>
-              販売ステータス：
-              <% if @project.is_active == true %>
-                販売中
-              <% elsif @project.is_active == false %>
-                販売停止中
-              <% end %>
-            </p>
-            <div class="col text-left">
-              <%= link_to "編集する", edit_admin_project_path(@project), data: {"turbolinks" => false}, class: "btn btn-success" %>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="container">
+   <div class="form-group row">
+    <h2 class="col-2 align-self-start text-center text-white bg-secondary mt-4">商品詳細</h2>
+    <table class= "table table-bordered">
+      <tr class="text-center">
+        <td>イベント名</td>
+        <td><%= @project.name %></td>
+      </tr>
+      <tr>
+        <td class="text-center">イベント説明</td>
+        <td><%= @project.description %></td>
+      </tr>
+      <tr class="text-center">
+        <td>ジャンル</td>
+        <td><%= @project.genre.name %></td>
+      </tr>
+      <tr class="text-center">
+        <td>税抜価格</td>
+        <td><%= @project.price.to_s(:delimited) %>円</td>
+      </tr>
+      <tr class="text-center">
+        <td>参加定員</td>
+        <td><%= @project.count_limid %>人</td>
+      </tr>
+      <tr class="text-center">
+        <td>開催日時</td>
+        <td><%= @project.expired_at %></td>
+      </tr>
+      <tr class="text-center">
+        <td>募集期限</td>
+        <td><%= @project.end_time %></td>
+      </tr>
+      <tr class="text-center">
+        <td>販売ステータス</td>
+        <td>
+          <% if @project.is_active == true %>
+            販売中
+          <% elsif @project.is_active == false %>
+            販売停止中
+          <% end %>
+        </td>
+      </tr>
+    </table>
+    <div class="col text-left">
+      <%= link_to "編集する", edit_admin_project_path(@project), data: {"turbolinks" => false}, class: "btn btn-success" %>
+      <%= link_to "削除", admin_project_path(@project), method: :delete, data: {confirm: "本当に削除してもよろしいですか？"}, local: true, class: "btn btn-danger" %>
     </div>
+   </div>
   </div>

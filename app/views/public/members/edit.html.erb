@@ -1,0 +1,67 @@
+<div class="center-block container">
+  <div calss="row">
+    <div class="col-xs-12">
+      <h2 class="head-line title_h2 text-center">会員情報編集</h2>
+      <% if @member.errors.any? %>
+        <%= @member.errors.count %>件のエラーが発生しています。正しく情報を入力してください!
+      <% end %>
+      <%= form_with(model:@member, url:public_member_path(@member.id), local: true ,method: :put) do |f| %>
+        <table class="col-12 table table-borderless">
+          <tbody>
+            <tr>
+              <td>
+                <%= f.label :"氏名", class: "col-xs-3" %>
+              </td>
+              <td>
+                <%= f.text_field :last_name, class: "col-12" %>
+              </td>
+              <td>
+                <%= f.text_field :first_name, class: "col-12" %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <%= f.label :"フリガナ", class: "col-xs-3" %>
+              </td>
+              <td>
+                <%= f.text_field :last_name_kana, class: "col-12" %>
+              </td>
+              <td>
+                <%= f.text_field :first_name_kana, class: "col-12" %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <%= f.label :"電話番号(ハイフンなし)", class: "col-xs-3" %>
+              </td>
+              <td>
+                <%= f.text_field :telephone_number, class: "col-12" %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <%= f.label :"メールアドレス", class: "col-xs-3" %>
+              </td>
+              <td>
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "col-12" %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <%= f.submit "編集内容を保存する", class: "btn btn-primary" %>
+              </td>
+              <td>
+                <%= link_to '退会する', public_members_withdrawal_path, class: "btn btn-danger "%>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <%= link_to "戻る", public_member_path(current_member), class: "btn btn-info" %>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      <% end %>
+    </div>
+  </div>
+</div>

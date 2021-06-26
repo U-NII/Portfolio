@@ -1,7 +1,7 @@
 class Public::ProjectsController < ApplicationController
 	def index
-      @genres = Genre.all
-      @projects = Project.where(sale_status: true).page(params[:page]).per(8)
+    @genres = Genre.all      
+    @projects = Project.where(is_active: true).where('expired_at >= ?', Date.current).page(params[:page]).per(8)
 	end
 
 	def show
@@ -15,7 +15,7 @@ class Public::ProjectsController < ApplicationController
 
 	private
 	def product_params
-	  parmas.require(:project).permit(:image ,:name, :description, :price, :sale_status)
+	  parmas.require(:project).permit(:image ,:name, :description, :price, :is_active)
 	end
 
 end

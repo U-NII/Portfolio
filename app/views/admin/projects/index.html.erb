@@ -38,7 +38,7 @@
               <td class="text-center align-middle">
                 <% if project.is_active %>
                   販売中
-                <% elsif project.sale_status %>
+                <% elsif project.is_active %>
                   販売停止中
                 <% end %>
               </td>

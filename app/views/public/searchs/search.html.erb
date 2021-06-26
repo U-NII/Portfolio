@@ -1,0 +1,4 @@
+<% if @model == 'project' %>
+  <h3>【Projectsモデルの検索結果】検索ワード：<%= @content %></h3>
+  <%= render 'public/projects/index', projects: @records %>
+<% end %>

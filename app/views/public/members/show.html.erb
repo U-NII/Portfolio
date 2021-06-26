@@ -1,0 +1,42 @@
+<p id="notice">
+<%= notice %>
+</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2 class="head-line text-center">マイページ</h2>
+      <p><strong><i class="far fa-user"></i>登録情報</strong>
+      <%= link_to " 編集する", edit_public_member_path, class: "btn btn-success" %>
+      </p>
+      <table class="table table-bordered">
+        <tbody>
+          <tr>
+            <td>氏名</td>
+            <td><%= @member.last_name %> <%= @member.first_name %></td>
+          </tr>
+          <tr>
+            <td>カナ</td>
+            <td><%= @member.last_name_kana %> <%= @member.first_name_kana %></td>
+          </tr>
+          <tr>
+            <td>電話番号</td>
+  					<td><%= @member.telephone_number %></td>
+          </tr>
+          <tr>
+            <td>メールアドレス</td>
+  					<td><%= @member.email %></td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <p><strong>配送先</strong>
+          <%= link_to " 一覧を見る", public_receiveds_path, data: {"turbolinks" => false}, class: "btn btn-info" %>
+        </p>
+        <p>
+          <strong>注文履歴</strong>
+          <%= link_to " 一覧を見る", public_requests_path, class: "btn btn-info" %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

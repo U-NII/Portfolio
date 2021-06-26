@@ -2,7 +2,7 @@
   <div calss="row">
     <div class="col-xs-12">
       <h4 class="my-4"><span style="background-color:#EFEFEF">　注文履歴一覧　</span></h4>
-      <% if @repuests.present? %>
+      <% if @requests.present? %>
       <table class="table table-hover table-bordered table-condensed">
         <thead>
           <tr class="info">
@@ -16,9 +16,9 @@
           <% @requests.each do |request| %>
             <tr>
               <td><%= request.created_at.strftime('%Y/%m/%d') %></td>
-              <td class="text-left"><%= link_to request.name, admin_request_path(order) %></td>
+              <td class="text-left"><%= link_to request.name, admin_request_path(request) %></td>
               <td class="text-left"><%= request.request_projects.sum(:quantity) %></td>
-              <td class="text-left"><%= request.status %></td>
+              <td class="text-left"><%= request.buy_status %></td>
             </tr>
           <% end %>
         </tbody>
