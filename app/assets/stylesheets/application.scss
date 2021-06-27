@@ -16,4 +16,8 @@
 @import "bootstrap";
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
-@import "fullcalendar"
+@import "fullcalendar";
+
+.theTarget {
+  height: 500px; /* ここの高さはいくつでも構いません */
+}
