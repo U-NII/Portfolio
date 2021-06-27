@@ -16,7 +16,7 @@
           <% if admin_signed_in? %>
           <%= link_to "OFFING",admin_requests_path, class: 'mt-2 mb-3 text-dark' %>
           <% else %>
-          <%= link_to "OFFING",root_path, class: 'mt-2 mb-3 text-dark' %>
+          <%= link_to image_tag("header.jpg", class: "header-image"),root_path %>
           <% end %>
           <nav>
           <ul class="navbar-nav ml-auto p-3">
@@ -25,7 +25,7 @@
           <li class="nav-item"><%= link_to "イベント一覧",public_projects_path, class: 'text-dark' %></li>
           <li class="nav-item"><%= link_to "カート",public_cart_projects_path, class: 'text-dark' %></li>
           <li class="nav-item"><%= link_to "ログアウト",destroy_member_session_path, method: :delete, class: 'text-dark' %></li>
-          <li><%= render 'public/searchs/form' %></li>
+          <li class="nav-item"><%= render 'public/searchs/form' %></li>
           <% elsif admin_signed_in? %>
           <li class="nav-item"><%= link_to "イベント一覧",admin_projects_path, class: 'text-dark' %></li>
           <li class="nav-item"><%= link_to "会員一覧",admin_members_path, class: 'text-dark' %></li>

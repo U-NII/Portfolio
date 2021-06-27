@@ -31,7 +31,6 @@ class Public::ReceivedsController < ApplicationController
   def destroy
      @received = Received.find(params[:id])
     if@received.destroy
-      #@received = current_member.address
       redirect_to public_receiveds_path, notice:"配送先を削除しました。"
     else
       render :index

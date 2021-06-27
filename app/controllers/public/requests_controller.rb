@@ -31,7 +31,7 @@ class Public::RequestsController < ApplicationController
     @request.total_price = @sub_total + @request.shipping_cost
     @request.pay_type = params[:request][:pay_type]
     @request.telephone_number = params[:request][:pay_type]
-
+    @request.entrys_option = params[:request][:entrys_option]
    if params[:request][:entrys_option] == "1"
     @request.telephone_number = current_member.telephone_number
     @request.name = current_member.last_name + current_member.first_name
@@ -58,7 +58,6 @@ class Public::RequestsController < ApplicationController
       current_member.address.new(request_params)
     end
 
-    #request_projects_maker(@request)
     # カート商品の情報を注文商品に移動
     @cart_projects = current_member.cart_projects
     @cart_projects.each do |cart_project|
@@ -84,10 +83,12 @@ class Public::RequestsController < ApplicationController
         end
       end
     end
-    @received = Received.new(member: current_member, name: @request.name, telephone_number: @request.telephone_number)
-    @received.save!
-    @cart_projects.destroy_all
-    redirect_to public_complete_path
+    if request_params[:entrys_option] == "3"
+      @received = Received.new(member: current_member, name: @request.name, telephone_number: @request.telephone_number)
+      @received.save!
+    end
+      @cart_projects.destroy_all
+      redirect_to public_complete_path
   end
   end
 
@@ -116,9 +117,10 @@ class Public::RequestsController < ApplicationController
   end
 
   def request_params
-    params.require(:request).permit(:pay_type, :name, :total_price, :telephone_number )
+    params.require(:request).permit(:pay_type, :name, :total_price, :telephone_number, :entrys_option )
   end
 
+  #new画面でのentrys_option3での情報入力の際、未記入だったときのバリデーション
   def check_name_and_tel_phone
     if params[:request][:entrys_option] == 3
       if params[:request][:name].empty? || params[:request][:telephone_number].empty?
@@ -133,8 +135,6 @@ class Public::RequestsController < ApplicationController
                     entrys_option: params[:request][:entrys_option]
         })
         @addresses = current_member.receiveds
-        #@request.errors.add(:name, "name must exist")
-        #redirect_to new_public_request_path
         render :new
       end
     end
