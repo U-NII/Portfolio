@@ -6,40 +6,40 @@
     <div class="col-md-3"></div>
     <h4 class="my-4"><span style="background-color:#EFEFEF">　注文履歴詳細　</span></h4>
   </div>
-  <%= @request.buy_status %>
-      <%= form_with(model: @request, url: admin_request_path, method: :patch, local: true, class: "form-row") do |f| %>
-        <%= f.select :buy_status,Request.buy_statuses.keys.map, class:"form-control form-control-sm col-6"  %>
-       <%= f.submit "更新" %>
-      <% end %>
 
-  <table class="col-10">
-    <tr>
-      <th>購入者</th>
-      <th><%= @request.name %></th>
-    </tr>
-    <tr>
-      <th>参加申請日</th>
-      <th><%= @request.created_at.strftime('%Y/%m/%d') %></th>
-    </tr>
-    <tr>
-      <th>支払い方法</th>
-      <th><%= @request.pay_type %></th>
-    </tr>
-    <tr>
-      <th>申請ステータス</th>
+  <div class="row">
+    <div class="col-md-3"><strong>購入者</strong></div>
+    <div class="col-md-9"><%= @request.name %></div>
+  </div>
+  <div class="row mt-3 mt-md-0">
+        <div class="col-md-3">参加申請日</div>
+    <div class="col-md-9"><%= @request.created_at.strftime('%Y/%m/%d') %></div>
+  </div>
+  <div class="row mt-3 mt-md-0">
+    <div class="col-md-3">支払い方法</div>
+    <div class="col-md-9"><%= @request.pay_type %></div>
+  </div>
+  <div class="row ">
+    <div class="col-md-3">申請ステータス</div>
+    <div class="col-md-3"><%= @request.buy_status %></div>
+    <div class="col-md-6">
+      <%= form_with(model: @request, url: admin_request_path, method: :patch, local: true) do |f| %>
+      <%= f.select :buy_status,Request.buy_statuses.keys.map, class: "admin-buy_status-2" %>
+      <%= f.submit "更新", class: "admin-buy_status-3" %>
+    <% end %>
+    </div>
+  </div>
 
-    </tr>
-  </table>
   <table class="table my-md-5	">
     <thead>
       <tr>
-        <th scope="col">商品名</th>
-        <th scope="col">単価(税込)</th>
-        <th scope="col">数量</th>
-        <th scope="col">小計</th>
-        <th scope="col">確認ステータス</th>
-        <th scope="col"></th>
-        <th scope="col"></th>
+        <th>商品名</th>
+        <th>単価(税込)</th>
+        <th>数量</th>
+        <th>小計</th>
+        <th>確認ステータス</th>
+        <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
