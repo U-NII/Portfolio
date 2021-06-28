@@ -1,75 +1,76 @@
-<p id="notice">
-<%= notice %>
-</p>
-<div class="container m-5">
-  <div class="row">
-    <div class="col-md-3"></div>
-    <h4 class="my-4"><span style="background-color:#EFEFEF">　注文履歴詳細　</span></h4>
-  </div>
-
-  <div class="row">
-    <div class="col-md-3"><strong>購入者</strong></div>
-    <div class="col-md-9"><%= @request.name %></div>
-  </div>
-  <div class="row mt-3 mt-md-0">
-        <div class="col-md-3">参加申請日</div>
-    <div class="col-md-9"><%= @request.created_at.strftime('%Y/%m/%d') %></div>
-  </div>
-  <div class="row mt-3 mt-md-0">
-    <div class="col-md-3">支払い方法</div>
-    <div class="col-md-9"><%= @request.pay_type %></div>
-  </div>
-  <div class="row ">
-    <div class="col-md-3">申請ステータス</div>
-    <div class="col-md-3"><%= @request.buy_status %></div>
-    <div class="col-md-6">
-      <%= form_with(model: @request, url: admin_request_path, method: :patch, local: true) do |f| %>
-      <%= f.select :buy_status,Request.buy_statuses.keys.map, class: "admin-buy_status-2" %>
-      <%= f.submit "更新", class: "admin-buy_status-3" %>
-    <% end %>
+  <p id="notice">
+  <%= notice %>
+  </p>
+  <div class="container m-5">
+    <div class="row">
+      <div class="col-md-3"></div>
+      <h4 class="my-4"><span style="background-color:#EFEFEF">　注文履歴詳細　</span></h4>
     </div>
-  </div>
 
-  <table class="table my-md-5	">
-    <thead>
-      <tr>
-        <th>商品名</th>
-        <th>単価(税込)</th>
-        <th>数量</th>
-        <th>小計</th>
-        <th>確認ステータス</th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @request_projects.each do |request_project| %>
-        <tr>
-          <td scope="col"><%= request_project.project.name %></td>
-          <td scope="col"><%= ((request_project.price * 1.1).floor).to_s(:delimited) %></td>
-          <td scope="col"><%= request_project.quantity %></td>
-          <td scope="col"><%= ((request_project.price * request_project.quantity * 1.1).floor).to_s(:delimited) %></td>
-          <td scope="col"><%= request_project.make_status %></td>
-            <%= form_with(model: request_project, url: admin_request_project_path(request_project.id), method: :patch, local: true, class: "form-row") do |f| %>
-              <td scope="col"><%= f.select :make_status,RequestProject.make_statuses.keys.map, class:"form-control form-control-sm col-6" %></td>
-              <td scope="col"><%= f.submit "更新", class: "btn btn-info" %></td>
-            <% end %>
-        </tr>
+    <div class="row">
+      <div class="col-md-3">購入者</div>
+      <div class="col-md-9"><%= @request.name %></div>
+    </div>
+    <div class="row mt-3 mt-md-0">
+      <div class="col-md-3">参加申請日</div>
+      <div class="col-md-9"><%= @request.created_at.strftime('%Y/%m/%d') %></div>
+    </div>
+    <div class="row mt-3 mt-md-0">
+      <div class="col-md-3">支払い方法</div>
+      <div class="col-md-9"><%= @request.pay_type %></div>
+    </div>
+    <div class="row ">
+      <div class="col-md-3">申請ステータス</div>
+      <div class="col-md-3"><%= @request.buy_status %></div>
+      <div class="col-md-6">
+        <%= form_with(model: @request, url: admin_request_path, method: :patch, local: true) do |f| %>
+        <%= f.select :buy_status,Request.buy_statuses.keys.map, class: "admin-buy_status-2" %>
+        <%= f.submit "更新", class: "admin-buy_status-3" %>
       <% end %>
-    </tbody>
-  </table>
-  <table>
-    <tr>
-      <th>商品合計</th>
-      <th><%= @sub_total.to_s(:delimited) %>円</th>
-    </tr>
-    <tr>
-      <th>手数料</th>
-      <th>500円</th>
-    </tr>
-    <tr>
-      <th>請求金額合計</th>
-      <th><%= @request.total_price.to_s(:delimited) %>円</th>
-    </tr>
-  </table>
-</div>
+      </div>
+    </div>
+     <div class="col-md-3"></div>
+    <h4 class="my-4"><span style="background-color:#EFEFEF">　申請内容　</span></h4>
+    <% @request_projects.each do |request_project| %>
+      <div class="row">
+        <div class="col-md-3">商品名</div>
+        <div class="col-md-9"><%= request_project.project.name %></div>
+      </div>
+      <div class="row mt-3 mt-md-0">
+        <div class="col-md-3">単価(税込)</div>
+        <div class="col-md-9"><%= ((request_project.price * 1.1).floor).to_s(:delimited) %></div>
+      </div>
+      <div class="row mt-3 mt-md-0">
+        <div class="col-md-3">数量</div>
+        <div class="col-md-9"><%= request_project.quantity %></div>
+      </div>
+      <div class="row mt-3 mt-md-0">
+        <div class="col-md-3">小計</div>
+        <div class="col-md-9"><%= ((request_project.price * request_project.quantity * 1.1).floor).to_s(:delimited) %></div>
+      </div>
+      <div class="row ">
+      <div class="col-md-3">確認ステータス</div>
+      <div class="col-md-3"><%= request_project.make_status %></div>
+      <div class="col-md-6">
+        <%= form_with(model: request_project, url: admin_request_project_path(request_project.id), method: :patch, local: true, class: "form-row") do |f| %>
+          <%= f.select :make_status,RequestProject.make_statuses.keys.map %>
+          <%= f.submit "更新" %>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+    <table>
+      <tr>
+        <th>商品合計</th>
+        <th><%= @sub_total.to_s(:delimited) %>円</th>
+      </tr>
+      <tr>
+        <th>手数料</th>
+        <th>500円</th>
+      </tr>
+      <tr>
+        <th>請求金額合計</th>
+        <th><%= @request.total_price.to_s(:delimited) %>円</th>
+      </tr>
+    </table>
+  </div>

@@ -4,8 +4,8 @@ class Public::GenresController < ApplicationController
   end
 
   def show
-    @projects = Project.all
-    #@project = Project.find(params[:id])
+    @genre = Genre.find_by(id: params[:id])
+    @projects = @genre.projects
   end
 
   private

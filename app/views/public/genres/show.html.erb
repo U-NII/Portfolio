@@ -7,9 +7,9 @@
           <tr class = text-cente>
             <th></th>
             <th>イベント名</th>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th>金額</th>
+            <th>参加定員</th>
+            <th>販売状況</th>
           </tr>
         </thead>
         <tbody>
@@ -18,7 +18,14 @@
             <td></td>
             <td><%= link_to project.name, public_project_path(project) %></td>
             <td>¥<%= project.price.to_s(:delimited) %></td>
-            <td></td>
+            <td><%= project.count_limid %>人</td>
+            <td>
+              <% if project.is_active == true %>
+                販売中
+              <% elsif project.is_active == false %>
+                販売停止中
+              <% end %>
+            </td>
           </tr>
           <% end %>
         </tbody>
