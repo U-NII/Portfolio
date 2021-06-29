@@ -1,5 +1,5 @@
 class Public::RequestsController < ApplicationController
-  before_action :check_name_and_tel_phone, only: [:request_confirm]
+  #efore_action :check_name_and_tel_phone, only: [:request_confirm]
 
   def index
     @requests = Request.all
@@ -17,6 +17,7 @@ class Public::RequestsController < ApplicationController
 
   def request_confirm
     @cart_projects = current_member.cart_projects
+    @addresses = current_member.receiveds
     @sub_total = 0
 
     @cart_projects.each do |cart|
@@ -42,6 +43,11 @@ class Public::RequestsController < ApplicationController
    elsif params[:request][:entrys_option] == "3"
     @request.telephone_number = params[:request][:telephone_number]
     @request.name = params[:request][:name]
+   end
+
+    #new画面でのバリデーション
+   if @request.invalid?
+     render :new
    end
   end
 
@@ -120,23 +126,4 @@ class Public::RequestsController < ApplicationController
     params.require(:request).permit(:pay_type, :name, :total_price, :telephone_number, :entrys_option )
   end
 
-  #new画面でのentrys_option3での情報入力の際、未記入だったときのバリデーション
-  def check_name_and_tel_phone
-    if params[:request][:entrys_option] == 3
-      if params[:request][:name].empty? || params[:request][:telephone_number].empty?
-        @request = Request.new({id: nil,
-                        member_id: nil,
-                    shipping_cost: nil,
-                         pay_type: params[:request][:pay_type],
-                      total_price: nil, name: params[:request][:name],
-                       buy_status: "入金待ち",
-                 telephone_number: params[:request][:telephone_number],
-                       created_at: nil, updated_at: nil,
-                    entrys_option: params[:request][:entrys_option]
-        })
-        @addresses = current_member.receiveds
-        render :new
-      end
-    end
-  end
 end
