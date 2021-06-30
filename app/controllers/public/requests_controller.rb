@@ -31,7 +31,7 @@ class Public::RequestsController < ApplicationController
     @request.shipping_cost = 500
     @request.total_price = @sub_total + @request.shipping_cost
     @request.pay_type = params[:request][:pay_type]
-    @request.telephone_number = params[:request][:pay_type]
+   #@request.telephone_number = params[:request][:pay_type]
     @request.entrys_option = params[:request][:entrys_option]
    if params[:request][:entrys_option] == "1"
     @request.telephone_number = current_member.telephone_number
