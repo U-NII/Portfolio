@@ -37,7 +37,7 @@ class Public::RequestsController < ApplicationController
     @request.telephone_number = current_member.telephone_number
     @request.name = current_member.last_name + current_member.first_name
    elsif params[:request][:entrys_option] == "2"
-    received = Received.find(params[:request][:address_id])
+    @received = Received.find(params[:request][:address_id])
     @request.telephone_number = received.telephone_number
     @request.name = received.name
    elsif params[:request][:entrys_option] == "3"
