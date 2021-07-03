@@ -2,13 +2,27 @@
     <div class="row">
       <div class="col-md-12">
         <div class="top-box">
-          <h1 class="top-title">ようこそ、OFFINGへ！</h1>
+          <div class="container">
+            <div id="theTarget" class="theTarget">
+              <div style="background-image: url(<%= asset_path("test1.jpg") %>)"></div>
+              <div style="background-image: url(<%= asset_path("test2.jpg") %>)"></div>
+              <div style="background-image: url(<%= asset_path("test3.jpg") %>)"></div>
+              <div style="background-image: url(<%= asset_path("test4.jpg") %>)"></div>
+              <div style="background-image: url(<%= asset_path("test5.jpg") %>)"></div>
+            </div>
+          </div>
+          <div class="top-text-1">
+            <h2 class="text-center">OFFINGでは誰でも気軽にイベントに参加することができます。</h2>
+          </div>
+          <div class="top-text-2">
+            <h2 class="text-center">さぁ、あなたも気になるイベントを見つけましょう。</h2>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div class="mx-auto col-md-8 mt-4">
-    <h2>新規イベント</h2>
+    <h2 class="text-center">新規イベント</h2>
     <div class="container">
       <div class="row">
         <% @projects.last(4).each do |project| %>
@@ -32,6 +46,9 @@
       <div class="all_products">
         <%= link_to "全ての商品を見る >", public_projects_path, class: "no-underline" %>
       </div>
-      <div id="calendar"></div>
+      <div class="top-text-1">
+        <h2 class="text-center">開催日から見つける</h2>
+        <div id="calendar"></div>
+      </div>
     </div>
   </div>

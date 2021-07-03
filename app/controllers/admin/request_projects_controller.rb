@@ -11,6 +11,6 @@ class Admin::RequestProjectsController < ApplicationController
 
   private
   def request_project_params
-    params.require(:request_project).permit(:project_status)
+    params.require(:request_project).permit(:make_status)
   end
 end

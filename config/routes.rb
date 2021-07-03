@@ -10,7 +10,6 @@ Rails.application.routes.draw do
      :sessions => 'members/sessions'
    }
   root to: "public/homes#top"
-  get "public/home/about" => "public/homes#about" ,as: "about"
 
   namespace :admin do
     root to: 'homes#top'
@@ -22,7 +21,6 @@ Rails.application.routes.draw do
 end
 
  namespace :public do
-    put "/members/:id/hide" => "members#hide", as: 'members_hide'
     get '/search', to: 'searchs#search'
     get "/members/:id/withdrawal" => "members#withdrawal", as: 'members_withdrawal'
     post "/members/request_confirm" => "requests#request_confirm", as: 'request_confirm'
@@ -36,6 +34,7 @@ end
     resources :requests
     resources :receiveds
     resources :events
+    resources :genres, only:[:index, :show]
     root "events#index"
   end
 
