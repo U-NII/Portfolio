@@ -1,0 +1,35 @@
+<div>
+  <div class="container">
+    <div class="row">
+      <h2 class="col-2 text-center text-white align-self-start bg-secondary mt-4">ジャンル内イベント一覧</h2>
+      <table class="table table-light table-hover">
+        <thead class="thead-light">
+          <tr class = text-cente>
+            <th></th>
+            <th>イベント名</th>
+            <th>金額</th>
+            <th>参加定員</th>
+            <th>販売状況</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @projects.each do |project| %>
+          <tr>
+            <td></td>
+            <td><%= link_to project.name, public_project_path(project) %></td>
+            <td>¥<%= project.price.to_s(:delimited) %></td>
+            <td><%= project.count_limid %>人</td>
+            <td>
+              <% if project.is_active == true %>
+                販売中
+              <% elsif project.is_active == false %>
+                販売停止中
+              <% end %>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

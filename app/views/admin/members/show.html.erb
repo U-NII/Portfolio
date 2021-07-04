@@ -19,16 +19,8 @@
         <th><%= @member.last_name_kana %> <%= @member.first_name_kana %></th>
       </tr>
       <tr>
-        <th>郵便番号</th>
-        <th><%= @member.postal_code %></th>
-      </tr>
-      <tr>
-        <th>住所</th>
-        <th><%= @member.address %></th>
-      </tr>
-      <tr>
         <th>電話番号</th>
-        <th><%= @member.phone_number %></th>
+        <th><%= @member.telephone_number %></th>
       </tr>
       <tr>
         <th>メールアドレス</th>
@@ -46,6 +38,6 @@
       </tr>
     </table>
     <%= link_to "編集する", edit_admin_member_path(@member.id), class:"btn btn-sm btn-success" %>
-    <%= link_to "注文履歴一覧を見る", public_orders_path(@member.id), class:"btn btn-sm btn-primary" %>
+    <%= link_to "注文履歴一覧を見る", public_requests_path(@member.id), class:"btn btn-sm btn-primary" %>
   </div>
 </div>

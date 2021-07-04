@@ -16,4 +16,40 @@
 @import "bootstrap";
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
-@import "fullcalendar"
+@import "fullcalendar";
+
+.theTarget {
+  height: 500px; /* ここの高さはいくつでも構いません */
+}
+
+.event-box {
+    height: 300px;
+}
+
+.nav-item {
+    margin-right:15px;
+}
+
+.header-image {
+  height: 150px;
+}
+
+.top-text-1 {
+  margin-top: 75px;
+}
+
+.top-text-1 {
+  margin-top: 75px;
+}
+
+.top-text-2 {
+  margin-top: 75px;
+}
+
+#calendar {
+  margin-top: 75px;
+}
+
+.admin-members-text-1 {
+  margin-top: 75px;
+}

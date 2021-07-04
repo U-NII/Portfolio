@@ -20,12 +20,6 @@
                   <td>¥<%= project.price.to_s(:delimited) %></td>
                 </tr>
               </table>
-          <% else %>
-            <div class="genre-button text-center mt-3">
-              <% @genres.each do |genre| %>
-                  <p class="btn-animation-02"><span><%= link_to genre.name, public_project_path(id: genre), class: 'btn btn-sm' %></span></p>
-              <% end %>
-            </div>
           <% end %>
         <% end %>
         </div>

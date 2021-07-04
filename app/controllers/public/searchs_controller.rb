@@ -18,7 +18,7 @@ class Public::SearchsController < ApplicationController
         if method == "perfect"
           Project.where(name: content)
         else
-          Project.where("title LIKE ?", "%"+content+"%")
+          Project.where("name LIKE ?", "%"+content+"%")
         end
       end
     end

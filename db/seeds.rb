@@ -31,10 +31,13 @@ Admin.create!(
   )
 
   Project.create!(
+    genre_id: 1,
     name: "パンクライブ",
     description: "パンクミュージックのライブです。",
     price: "500",
-    genre_id: 1,
+    image: open("./app/assets/images/punk.jpg"),
     is_active: [['販売中', true], ['販売停止', false]],
-    image: open("./app/assets/images/punk.jpg")
+    expired_at: "2021.07.21",
+    end_time: "2021.07.14",
+    count_limid: "30"
   )
