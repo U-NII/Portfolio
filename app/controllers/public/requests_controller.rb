@@ -1,5 +1,4 @@
 class Public::RequestsController < ApplicationController
-  #efore_action :check_name_and_tel_phone, only: [:request_confirm]
 
   def index
     @requests = Request.all
