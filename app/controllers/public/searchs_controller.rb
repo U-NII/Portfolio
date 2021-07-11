@@ -22,4 +22,4 @@ class Public::SearchsController < ApplicationController
         end
       end
     end
-end 
+end
